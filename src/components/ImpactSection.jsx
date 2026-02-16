@@ -1,5 +1,8 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
+import img1 from '../assets/MAKE/1.jpg';
+import img2 from '../assets/MAKE/2.jpg';
+import img3 from '../assets/MAKE/3.jpg';
 
 const ImpactSection = () => {
     return (
@@ -25,7 +28,7 @@ const ImpactSection = () => {
                 <div className="w-full h-[300px] lg:h-[500px] rounded-lg overflow-hidden mb-16 relative">
                     {/* Placeholder for the main charity image (man and girl) */}
                     <img
-                        src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=1000"
+                        src={img1}
                         alt="Ruby Community Impact"
                         className="w-full h-full object-cover"
                     />
@@ -53,7 +56,7 @@ const ImpactSection = () => {
                                 Thailand
                             </span>
                             <img
-                                src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=1000"
+                                src={img2}
                                 alt="Charity Event Thailand"
                                 className="w-full h-full object-cover"
                             />
@@ -70,7 +73,7 @@ const ImpactSection = () => {
                                 Thailand
                             </span>
                             <img
-                                src="https://images.unsplash.com/photo-1617450365226-9bf28c5d66e6?auto=format&fit=crop&q=80&w=1000"
+                                src={img3}
                                 alt="Donation Supplies"
                                 className="w-full h-full object-cover"
                             />

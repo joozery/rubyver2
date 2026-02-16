@@ -30,23 +30,25 @@ const Hero = () => {
                         <img
                             src={img}
                             alt={`Trading Background ${index + 1}`}
-                            className="h-full w-full object-cover object-right lg:object-center"
+                            className="h-full w-[170%] max-w-none object-contain object-bottom lg:w-full lg:max-w-full lg:object-cover lg:object-center"
                         />
                     </div>
                 ))}
             </div>
 
+
+
             {/* Content Container */}
             <div className="container mx-auto px-6 lg:px-12 relative z-10 flex flex-col lg:flex-row items-center h-full">
                 <div className="lg:w-1/2 pt-10 lg:pt-0">
                     <h1 className="flex flex-col mb-4">
-                        <span className="text-[52px] lg:text-[75px] font-black leading-[0.9] text-red-600 tracking-tight">
+                        <span className="text-[40px] lg:text-[75px] font-black leading-[0.9] text-red-600 tracking-tight">
                             UNCOVER YOUR
                         </span>
-                        <span className="text-[52px] lg:text-[75px] font-black leading-[0.9] text-red-600 tracking-tight">
+                        <span className="text-[40px] lg:text-[75px] font-black leading-[0.9] text-red-600 tracking-tight">
                             POTENTIAL.
                         </span>
-                        <span className="text-[32px] lg:text-[52px] font-bold mt-2 tracking-tight" style={{ color: '#817C7B' }}>
+                        <span className="text-[24px] lg:text-[52px] font-bold mt-2 tracking-tight" style={{ color: '#817C7B' }}>
                             TRADE WITH RUBY
                         </span>
                     </h1>
@@ -55,11 +57,11 @@ const Hero = () => {
                         Everything you need for seamless, efficient trading. Partner with an established online broker and take control of your financial future.
                     </p>
 
-                    <div className="flex flex-row items-center">
-                        <button className="bg-[#d33027] hover:bg-red-700 text-white px-8 py-3 rounded-l-2xl font-bold text-lg transition-all active:scale-[0.98] shadow-xl shadow-red-900/40 z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-3 lg:gap-0 w-full lg:w-auto">
+                        <button className="bg-[#d33027] hover:bg-red-700 text-white px-8 py-3 rounded-[10px] lg:rounded-l-2xl lg:rounded-r-none font-bold text-lg transition-all active:scale-[0.98] shadow-xl shadow-red-900/40 z-10 w-full lg:w-auto">
                             Open Account
                         </button>
-                        <button className="bg-white hover:bg-gray-50 text-gray-500 px-8 py-3 rounded-r-2xl font-bold text-lg border-y border-r border-[#d33027] -ml-px transition-all active:scale-[0.98] shadow-xl shadow-black/5">
+                        <button className="bg-white hover:bg-gray-50 text-gray-500 px-8 py-3 rounded-[10px] lg:rounded-r-2xl lg:rounded-l-none font-bold text-lg border border-[#d33027] lg:border-l-0 lg:-ml-px transition-all active:scale-[0.98] shadow-xl shadow-black/5 w-full lg:w-auto">
                             Open Demo Account
                         </button>
                     </div>
