@@ -16,8 +16,8 @@ const StocksHero = () => {
                     alt="Trade Stocks with Ruby"
                     className="w-full h-full object-cover object-center"
                 />
-                {/* Dark Red Gradient Overlay for Text Readability */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#380000] via-[#7d0000]/80 to-transparent z-0"></div>
+                {/* Subtle Red Gradient Overlay for Text Readability */}
+                <div className="absolute inset-0 bg-gradient-to-r from-red-950/80 via-red-900/20 to-transparent z-0 pointer-events-none"></div>
             </div>
 
             {/* Top Navigation Tabs - Overlaying the Hero */}
@@ -27,10 +27,10 @@ const StocksHero = () => {
                         {categories.map((cat, index) => (
                             <Link
                                 key={index}
-                                to={cat === 'Stocks' ? '/stocks' : cat === 'Forex' ? '/forex' : cat === 'Metals' ? '/metals' : cat === 'Indices' ? '/indices' : cat === 'Energies' ? '/energies' : '#'}
+                                to={`/${cat.toLowerCase().replace(' ', '-')}`}
                                 className={`text-sm lg:text-base font-bold uppercase tracking-wider whitespace-nowrap transition-colors pb-2 relative ${cat === 'Stocks'
-                                        ? 'text-white'
-                                        : 'text-white/70 hover:text-white'
+                                    ? 'text-white'
+                                    : 'text-white/70 hover:text-white'
                                     }`}
                             >
                                 {cat}

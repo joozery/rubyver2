@@ -14,10 +14,10 @@ const EnergiesHero = () => {
                 <img
                     src={heroImg}
                     alt="Trade Energies with Ruby"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-right lg:object-center"
                 />
-                {/* Dark Gradient Overlay for Text Readability */}
-                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent z-0"></div>
+                {/* Subtle Gradient Overlay so background is fully visible */}
+                <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/10 to-transparent z-0 pointer-events-none"></div>
             </div>
 
             {/* Top Navigation Tabs - Overlaying the Hero */}
@@ -27,7 +27,7 @@ const EnergiesHero = () => {
                         {categories.map((cat, index) => (
                             <Link
                                 key={index}
-                                to={cat === 'Energies' ? '/energies' : cat === 'Forex' ? '/forex' : cat === 'Metals' ? '/metals' : cat === 'Indices' ? '/indices' : cat === 'Stocks' ? '/stocks' : '#'}
+                                to={`/${cat.toLowerCase().replace(' ', '-')}`}
                                 className={`text-sm lg:text-base font-bold uppercase tracking-wider whitespace-nowrap transition-colors pb-2 relative ${cat === 'Energies'
                                     ? 'text-[#FF4500]'
                                     : 'text-white/70 hover:text-white'

@@ -18,10 +18,10 @@ const MetalsHero = () => {
                         {categories.map((cat, index) => (
                             <Link
                                 key={index}
-                                to={cat === 'Metals' ? '/metals' : cat === 'Forex' ? '/forex' : '#'}
+                                to={`/${cat.toLowerCase().replace(' ', '-')}`}
                                 className={`text-sm lg:text-base font-bold uppercase tracking-wider whitespace-nowrap transition-colors pb-2 relative ${cat === 'Metals'
-                                        ? 'text-black'
-                                        : 'text-gray-500 hover:text-black'
+                                    ? 'text-black'
+                                    : 'text-gray-500 hover:text-black'
                                     }`}
                             >
                                 {cat}
@@ -51,15 +51,13 @@ const MetalsHero = () => {
                     </button>
                 </div>
 
-                {/* Hero Image */}
-                <div className="w-full lg:w-1/2 relative h-[400px] lg:h-full flex items-center justify-center lg:justify-end z-10">
-                    <div className="relative w-[120%] h-[120%] lg:w-[140%] lg:h-[140%] right-[-10%] lg:right-[-20%]">
-                        <img
-                            src={metalsImg}
-                            alt="Trade Metals with Ruby"
-                            className="w-full h-full object-contain animate-float"
-                        />
-                    </div>
+                {/* Hero Image - large, overflowing top/right, cropped by section overflow:hidden */}
+                <div className="absolute right-[-5%] top-[-10%] w-[55%] h-[120%] z-10 pointer-events-none">
+                    <img
+                        src={metalsImg}
+                        alt="Trade Metals with Ruby"
+                        className="w-full h-full object-contain object-center"
+                    />
                 </div>
             </div>
 

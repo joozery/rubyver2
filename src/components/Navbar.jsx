@@ -169,9 +169,13 @@ const Navbar = () => {
                                         <div className="border-r border-gray-50">
                                             <h4 className="text-[#a0a0a0] font-bold text-sm uppercase mb-3 tracking-wider">Analytics</h4>
                                             <div className="space-y-3">
-                                                <button className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left">
+                                                <Link
+                                                    to="/market-analytics"
+                                                    onClick={() => setIsAnalyticsOpen(false)}
+                                                    className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left"
+                                                >
                                                     Market Analytics
-                                                </button>
+                                                </Link>
                                             </div>
                                         </div>
 
@@ -179,9 +183,13 @@ const Navbar = () => {
                                         <div className="pl-[10px]">
                                             <h4 className="text-[#a0a0a0] font-bold text-sm uppercase mb-3 tracking-wider">Education</h4>
                                             <div className="space-y-3">
-                                                <button className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
+                                                <Link
+                                                    to="/academy"
+                                                    onClick={() => setIsAnalyticsOpen(false)}
+                                                    className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap"
+                                                >
                                                     RUBY Academy
-                                                </button>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
@@ -210,12 +218,12 @@ const Navbar = () => {
                                     <div className="absolute top-[60px] left-[-20px] bg-white w-[240px] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] py-10 px-[22px] flex flex-col border border-gray-100 animate-in fade-in slide-in-from-top-4 duration-300 z-50">
                                         <h4 className="text-[#a0a0a0] font-bold text-sm uppercase mb-3 tracking-wider">Company</h4>
                                         <div className="space-y-3">
-                                            <button className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
+                                            <Link to="/about" className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
                                                 About RUBY
-                                            </button>
-                                            <button className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
+                                            </Link>
+                                            <Link to="/support" className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
                                                 Support
-                                            </button>
+                                            </Link>
                                         </div>
                                     </div>
                                 </>
@@ -243,15 +251,15 @@ const Navbar = () => {
                                     <div className="absolute top-[60px] left-[-20px] bg-white w-[300px] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] py-10 px-[22px] flex flex-col border border-gray-100 animate-in fade-in slide-in-from-top-4 duration-300 z-50">
                                         <h4 className="text-[#a0a0a0] font-bold text-sm uppercase mb-3 tracking-wider whitespace-nowrap">RUBY Partnership Programs</h4>
                                         <div className="space-y-3">
-                                            <button className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
+                                            <Link to="/ruby-ib-program" className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
                                                 RUBY IB Program
-                                            </button>
-                                            <button className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
+                                            </Link>
+                                            <Link to="/ruby-multi-level" className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
                                                 RUBY Multi-level Partnership
-                                            </button>
-                                            <button className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
+                                            </Link>
+                                            <Link to="/ruby-forex-loyalty" className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
                                                 RUBY Forex Loyalty
-                                            </button>
+                                            </Link>
                                         </div>
                                     </div>
                                 </>

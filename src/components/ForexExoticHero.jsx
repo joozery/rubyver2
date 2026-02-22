@@ -16,8 +16,8 @@ const ForexExoticHero = () => {
                     alt="Trade Forex Exotic with Ruby"
                     className="w-full h-full object-cover object-center"
                 />
-                {/* Brown/Gold Gradient Overlay for Text Readability */}
-                <div className="absolute inset-0 bg-gradient-to-r from-[#3e2712] via-[#6b4218]/80 to-transparent z-0"></div>
+                {/* Subtle Brown/Gold Gradient Overlay for Text Readability */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#3e2712]/80 via-[#6b4218]/20 to-transparent z-0 pointer-events-none"></div>
             </div>
 
             {/* Top Navigation Tabs - Overlaying the Hero */}
@@ -27,10 +27,10 @@ const ForexExoticHero = () => {
                         {categories.map((cat, index) => (
                             <Link
                                 key={index}
-                                to={cat === 'Forex Exotic' ? '/forex-exotic' : cat === 'Forex' ? '/forex' : cat === 'Metals' ? '/metals' : cat === 'Indices' ? '/indices' : cat === 'Energies' ? '/energies' : cat === 'Stocks' ? '/stocks' : '#'}
+                                to={`/${cat.toLowerCase().replace(' ', '-')}`}
                                 className={`text-sm lg:text-base font-bold uppercase tracking-wider whitespace-nowrap transition-colors pb-2 relative ${cat === 'Forex Exotic'
-                                        ? 'text-white'
-                                        : 'text-white/70 hover:text-white'
+                                    ? 'text-white'
+                                    : 'text-white/70 hover:text-white'
                                     }`}
                             >
                                 {cat}

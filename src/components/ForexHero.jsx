@@ -1,5 +1,6 @@
 import React from 'react';
 import rubygemForex from '../assets/forex/rubygemforex.png';
+import { Link } from 'react-router-dom';
 
 const ForexHero = () => {
     const categories = [
@@ -13,7 +14,11 @@ const ForexHero = () => {
                 <div className="container mx-auto px-6 lg:px-12">
                     <div className="flex items-center gap-6 lg:gap-10 border-b border-white/10 pb-4 overflow-x-auto no-scrollbar">
                         {categories.map((cat, index) => (
-                            <div key={index} className="relative group cursor-pointer shrink-0">
+                            <Link
+                                key={index}
+                                to={`/${cat.toLowerCase().replace(' ', '-')}`}
+                                className="relative group cursor-pointer shrink-0"
+                            >
                                 <span className={`text-sm lg:text-[15px] font-bold uppercase transition-all ${cat === "Forex" ? "text-white scale-105" : "text-white/70 hover:text-white"}`}>
                                     {cat}
                                 </span>
@@ -22,7 +27,7 @@ const ForexHero = () => {
                                         <div className="absolute -top-[6px] left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-b-[6px] border-b-white"></div>
                                     </div>
                                 )}
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>

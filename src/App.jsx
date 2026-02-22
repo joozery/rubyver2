@@ -11,6 +11,13 @@ import Indices from './pages/Indices';
 import Energies from './pages/Energies';
 import Stocks from './pages/Stocks';
 import ForexExotic from './pages/ForexExotic';
+import MarketAnalytics from './pages/MarketAnalytics';
+import Academy from './pages/Academy';
+import About from './pages/About';
+import Support from './pages/Support';
+import Program from './pages/Program';
+import MultiLevel from './pages/MultiLevel';
+import Loyalty from './pages/Loyalty';
 
 function App() {
   return (
@@ -29,6 +36,13 @@ function App() {
         <Route path="/energies" element={<Energies />} />
         <Route path="/stocks" element={<Stocks />} />
         <Route path="/forex-exotic" element={<ForexExotic />} />
+        <Route path="/market-analytics" element={<MarketAnalytics />} />
+        <Route path="/academy" element={<Academy />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/ruby-ib-program" element={<Program />} />
+        <Route path="/ruby-multi-level" element={<MultiLevel />} />
+        <Route path="/ruby-forex-loyalty" element={<Loyalty />} />
       </Routes>
     </Router>
   )

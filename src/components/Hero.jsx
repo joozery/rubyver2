@@ -30,7 +30,7 @@ const Hero = () => {
                         <img
                             src={img}
                             alt={`Trading Background ${index + 1}`}
-                            className="h-full w-[170%] max-w-none object-contain object-bottom lg:w-full lg:max-w-full lg:object-cover lg:object-center"
+                            className="w-full h-full object-cover object-center"
                         />
                     </div>
                 ))}

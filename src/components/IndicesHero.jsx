@@ -16,7 +16,7 @@ const IndicesHero = () => {
                         {categories.map((cat, index) => (
                             <Link
                                 key={index}
-                                to={cat === 'Indices' ? '/indices' : cat === 'Forex' ? '/forex' : cat === 'Metals' ? '/metals' : cat === 'Energies' ? '/energies' : cat === 'Stocks' ? '/stocks' : '#'}
+                                to={`/${cat.toLowerCase().replace(' ', '-')}`}
                                 className={`text-sm lg:text-base font-bold uppercase tracking-wider whitespace-nowrap transition-colors pb-2 relative ${cat === 'Indices'
                                     ? 'text-black'
                                     : 'text-gray-700 hover:text-black'
