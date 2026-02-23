@@ -18,9 +18,14 @@ const AboutRecognized = () => {
 
                 {/* Button */}
                 <div className="flex justify-center">
-                    <button className="bg-[#e42e2e] hover:bg-red-600 text-white font-semibold text-lg px-10 py-3 rounded-md transition-colors shadow-lg">
+                    <a
+                        href="https://client.rubyfxtrade.com/register/trader"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#e42e2e] hover:bg-red-600 text-white font-semibold text-lg px-10 py-3 rounded-md transition-colors shadow-lg flex items-center justify-center text-center"
+                    >
                         Trade with RUBY
-                    </button>
+                    </a>
                 </div>
             </div>
 

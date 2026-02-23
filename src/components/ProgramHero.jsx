@@ -19,9 +19,14 @@ const ProgramHero = () => {
                         Build your own business with zero upfront costs.
                     </p>
 
-                    <button className="bg-[#facc15] hover:bg-yellow-500 text-white font-bold text-lg px-8 py-3 rounded-md mb-10 transition-colors shadow-lg shadow-[#d97706]/40">
+                    <a
+                        href="https://client.rubyfxtrade.com/register/trader"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#facc15] hover:bg-yellow-500 text-white font-bold text-lg px-8 py-3 rounded-md mb-10 transition-colors shadow-lg shadow-[#d97706]/40 inline-block text-center"
+                    >
                         Open Partner Account
-                    </button>
+                    </a>
 
                     <p className="text-white text-base md:text-[19px] leading-[1.6] font-medium max-w-[650px]">
                         Invite your clients to trade with RUBY and unlock access to some of the industry’s most competitive commission structures. As your clients grow, your earnings grow alongside them.

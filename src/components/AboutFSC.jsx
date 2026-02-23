@@ -26,9 +26,14 @@ const AboutFSC = () => {
                 <p className="text-white text-base lg:text-[22px] leading-relaxed mb-10 max-w-xl">
                     The FSC (Belize) license allows us to help traders worldwide overcome trading challenges and pursue their dreams.
                 </p>
-                <button className="bg-white/10 border border-white/30 hover:bg-white/20 text-white font-bold px-8 py-3 rounded-lg text-lg transition-all w-max">
+                <a
+                    href="https://client.rubyfxtrade.com/register/trader"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white/10 border border-white/30 hover:bg-white/20 text-white font-bold px-8 py-3 rounded-lg text-lg transition-all w-max flex items-center justify-center text-center"
+                >
                     Start trading
-                </button>
+                </a>
             </div>
 
             {/* Right Content — Floating white card */}

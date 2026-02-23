@@ -20,9 +20,14 @@ const AcademyCTA = () => {
                     START HERE
                 </h2>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <button className="bg-red-600 hover:bg-red-700 text-white font-bold px-12 py-3.5 rounded-lg text-base transition-colors w-full sm:w-auto">
+                    <a
+                        href="https://client.rubyfxtrade.com/register/trader"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-red-600 hover:bg-red-700 text-white font-bold px-12 py-3.5 rounded-lg text-base transition-colors w-full sm:w-auto inline-flex items-center justify-center text-center"
+                    >
                         Let's trade
-                    </button>
+                    </a>
                     <button className="bg-transparent border-2 border-white/60 hover:border-white text-white font-bold px-12 py-3.5 rounded-lg text-base transition-colors w-full sm:w-auto">
                         Learn first
                     </button>

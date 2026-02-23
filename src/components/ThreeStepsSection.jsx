@@ -72,9 +72,14 @@ const ThreeStepsSection = () => {
                 </div>
 
                 <div className="flex justify-center">
-                    <button className="bg-[#ff0000] hover:bg-red-700 text-white font-bold py-4 px-16 rounded-lg text-xl transition-all shadow-xl">
+                    <a
+                        href="https://client.rubyfxtrade.com/register/trader"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#ff0000] hover:bg-red-700 text-white font-bold py-4 px-16 rounded-lg text-xl transition-all shadow-xl text-center"
+                    >
                         Start trading
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>

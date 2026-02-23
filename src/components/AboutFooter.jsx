@@ -1,7 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Facebook, Instagram, Youtube, Send, MessageCircle, MessageSquare } from 'lucide-react';
 
 const AboutFooter = () => {
+    const { t } = useTranslation();
     return (
         <footer className="bg-[#111111] text-white pt-16 pb-20 px-6 lg:px-12 border-t border-white/5">
             <div className="container mx-auto">
@@ -13,7 +15,7 @@ const AboutFooter = () => {
                         <div className="flex flex-col sm:flex-row gap-16">
                             {/* Column 1 */}
                             <div>
-                                <h4 className="text-white text-[13px] font-medium mb-3">RUBY ad social media</h4>
+                                <h4 className="text-white text-[13px] font-medium mb-3">{t('footer.social_media')}</h4>
                                 <div className="flex items-center gap-2.5">
                                     <a href="#" className="w-[38px] h-[38px] rounded-xl border border-white/30 flex items-center justify-center hover:bg-white/10 transition-colors">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" /></svg>
@@ -32,7 +34,7 @@ const AboutFooter = () => {
 
                             {/* Column 2 */}
                             <div>
-                                <h4 className="text-white text-[13px] font-medium mb-3">RUBY ad social media</h4>
+                                <h4 className="text-white text-[13px] font-medium mb-3">{t('footer.social_media')}</h4>
                                 <div className="flex items-center gap-2.5">
                                     <a href="#" className="w-[38px] h-[38px] rounded-xl border border-white/30 flex items-center justify-center hover:bg-white/10 transition-colors">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 10H6v-2h12v2zm0-3H6V7h12v2z" /></svg>
@@ -69,7 +71,7 @@ const AboutFooter = () => {
                                     </defs>
                                 </svg>
                                 <div className="text-left">
-                                    <p className="text-[11px] text-white/90 leading-tight">Get on the</p>
+                                    <p className="text-[11px] text-white/90 leading-tight">{t('footer.get_it_on')}</p>
                                     <p className="text-[16px] font-bold leading-tight tracking-wide">Google Play</p>
                                 </div>
                             </button>
@@ -80,7 +82,7 @@ const AboutFooter = () => {
                                     <path d="M16.5 13.5C16.5 16 18 17 18 17C17.5 18.5 16.5 20 15.5 20C14.5 20 14 19.5 12.5 19.5C11 19.5 10.5 20 9.5 20C8.5 20 7 18 6.5 16.5C5.5 14 5.5 10.5 7.5 9C8.5 8 9.5 8 10.5 8C11.5 8 12.5 8.5 13.5 8.5C14.5 8.5 15.5 8 16.5 8C17.5 8 19 8.5 19.5 10C19.5 10 16.5 11 16.5 13.5ZM14.5 7C15 6 15 5 14.5 4C13.5 4.5 12.5 5.5 13 6.5C13 7 14 7.5 14.5 7Z" />
                                 </svg>
                                 <div className="text-left">
-                                    <p className="text-[11px] text-white/90 leading-tight">Get MT4 on the</p>
+                                    <p className="text-[11px] text-white/90 leading-tight">{t('footer.get_mt4')}</p>
                                     <p className="text-[16px] font-bold leading-tight tracking-wide">App Store</p>
                                 </div>
                             </button>
@@ -91,7 +93,7 @@ const AboutFooter = () => {
                                     <path d="M16.5 13.5C16.5 16 18 17 18 17C17.5 18.5 16.5 20 15.5 20C14.5 20 14 19.5 12.5 19.5C11 19.5 10.5 20 9.5 20C8.5 20 7 18 6.5 16.5C5.5 14 5.5 10.5 7.5 9C8.5 8 9.5 8 10.5 8C11.5 8 12.5 8.5 13.5 8.5C14.5 8.5 15.5 8 16.5 8C17.5 8 19 8.5 19.5 10C19.5 10 16.5 11 16.5 13.5ZM14.5 7C15 6 15 5 14.5 4C13.5 4.5 12.5 5.5 13 6.5C13 7 14 7.5 14.5 7Z" />
                                 </svg>
                                 <div className="text-left">
-                                    <p className="text-[11px] text-white/90 leading-tight">Get MT5 on the</p>
+                                    <p className="text-[11px] text-white/90 leading-tight">{t('footer.get_mt5')}</p>
                                     <p className="text-[16px] font-bold leading-tight tracking-wide">App Store</p>
                                 </div>
                             </button>
@@ -102,17 +104,20 @@ const AboutFooter = () => {
                         {/* Disclaimer Text */}
                         <div className="text-[#666666] text-[11px] font-medium leading-[1.8] space-y-6">
                             <p>
-                                RUBYFX GLOBAL LIMITED is a private limited company registered in England and Wales under company number 16723963. RUBYFX GLOBAL LIMITED operates the Ruby FX brand and manages its online services through: www.rubyfxtrade.com
+                                {t('footer.legal_1')}
+                                <a href="https://www.rubyfxtrade.com" className="hover:text-white/80 ml-1">www.rubyfxtrade.com</a>
                             </p>
                             <p>
-                                RUBYFX GLOBAL LIMITED is authorized by the Financial Sector Conduct Authority (FSCA) in South Africa as a Financial Service Provider FSP: 1234567890. RUBYFX GLOBAL LIMITED Operates under www.rubyfxtrade.com
+                                {t('footer.legal_2')}
+                                <a href="https://www.rubyfxtrade.com" className="hover:text-white/80 ml-1">www.rubyfxtrade.com</a>
+                            </p>
+                            <p>
+                                {t('footer.legal_3')}
                             </p>
                             <div>
-                                <p className="font-bold mb-1">Important Notice</p>
+                                <p className="font-bold mb-1 text-white/50">{t('footer.important_notice')}</p>
                                 <p>
-                                    RUBYFX GLOBAL LIMITED is registered as a private limited company under the laws of England and Wales. This registration confirms the company's legal establishment; however, it does not constitute authorization or licensing from any financial regulatory authority in the United Kingdom, including the Financial Conduct Authority (FCA).
-                                    <br />
-                                    Clients should carefully review all regulatory information and risk disclosures provided by Ruby FX before engaging in financial or trading activities. Trading leveraged financial products involves a high level of risk and may not be suitable for all investors.
+                                    {t('footer.notice_text')}
                                 </p>
                             </div>
                         </div>

@@ -60,9 +60,14 @@ const StayConfidentSection = () => {
                             </p>
                         </div>
 
-                        <button className="flex items-center gap-2 border-2 border-black rounded-lg px-6 py-3 font-bold hover:bg-black hover:text-white transition-all">
+                        <a
+                            href="https://client.rubyfxtrade.com/register/trader"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 border-2 border-black rounded-lg px-6 py-3 font-bold hover:bg-black hover:text-white transition-all w-max"
+                        >
                             More about margin and leverage <ChevronRight size={18} />
-                        </button>
+                        </a>
                     </div>
 
                 </div>

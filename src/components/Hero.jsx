@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import heroBg1 from '../assets/herosection/backgorund.jpeg';
 import heroBg2 from '../assets/herosection/Banner-home-Top2.jpg';
 import heroBg3 from '../assets/herosection/Banner-home-Top-3.jpg';
 
+import heroMobile1 from '../assets/moblie/herosection/m1.jpg';
+import heroMobile2 from '../assets/moblie/herosection/m2.jpg';
+import heroMobile3 from '../assets/moblie/herosection/m3.jpg';
+
 const Hero = () => {
-    const images = [heroBg1, heroBg2, heroBg3];
+    const { t } = useTranslation();
+    const images = [
+        { desktop: heroBg1, mobile: heroMobile1 },
+        { desktop: heroBg2, mobile: heroMobile2 },
+        { desktop: heroBg3, mobile: heroMobile3 }
+    ];
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     useEffect(() => {
@@ -16,54 +26,69 @@ const Hero = () => {
     }, [images.length]);
 
     return (
-        <section className="relative h-[587px] w-full flex items-center pt-[81px] overflow-hidden bg-white">
+        <section className="relative h-[720px] md:h-[587px] w-full flex items-center pt-[81px] overflow-hidden bg-white">
             {/* 
               Background Image Slider
             */}
             <div className="absolute inset-0 z-0 flex justify-end">
-                {images.map((img, index) => (
+                {images.map((pair, index) => (
                     <div
                         key={index}
                         className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
                             }`}
                     >
+                        {/* Desktop Image */}
                         <img
-                            src={img}
+                            src={pair.desktop}
                             alt={`Trading Background ${index + 1}`}
-                            className="w-full h-full object-cover object-center"
+                            className="hidden md:block w-full h-full object-cover object-center"
+                        />
+                        {/* Mobile Image */}
+                        <img
+                            src={pair.mobile}
+                            alt={`Trading Background Mobile ${index + 1}`}
+                            className="block md:hidden w-full h-full object-cover object-center"
                         />
                     </div>
                 ))}
             </div>
 
-
-
             {/* Content Container */}
-            <div className="container mx-auto px-6 lg:px-12 relative z-10 flex flex-col lg:flex-row items-center h-full">
-                <div className="lg:w-1/2 pt-10 lg:pt-0">
+            <div className="container mx-auto px-6 lg:px-12 relative z-10 flex flex-col lg:flex-row items-start md:items-center h-full">
+                <div className="lg:w-1/2 pt-16 lg:pt-0">
                     <h1 className="flex flex-col mb-4">
-                        <span className="text-[40px] lg:text-[75px] font-black leading-[0.9] text-red-600 tracking-tight">
-                            UNCOVER YOUR
+                        <span className="text-[36px] lg:text-[75px] font-black leading-[1] text-[#E31E24] tracking-tight uppercase">
+                            {t('home.hero.title_1')}
                         </span>
-                        <span className="text-[40px] lg:text-[75px] font-black leading-[0.9] text-red-600 tracking-tight">
-                            POTENTIAL.
+                        <span className="text-[36px] lg:text-[75px] font-black leading-[1] text-[#E31E24] tracking-tight uppercase">
+                            {t('home.hero.title_2')}
                         </span>
-                        <span className="text-[24px] lg:text-[52px] font-bold mt-2 tracking-tight" style={{ color: '#817C7B' }}>
-                            TRADE WITH RUBY
+                        <span className="text-[28px] lg:text-[52px] font-medium mt-2 tracking-tight uppercase text-[#666666]">
+                            {t('home.hero.subtitle')}
                         </span>
                     </h1>
 
-                    <p className="text-base lg:text-lg max-w-xl mb-10 leading-snug font-medium" style={{ color: '#817C7B' }}>
-                        Everything you need for seamless, efficient trading. Partner with an established online broker and take control of your financial future.
+                    <p className="text-base lg:text-lg max-w-xl mb-8 leading-snug font-medium text-[#666666]">
+                        {t('home.hero.desc')}
                     </p>
 
-                    <div className="flex flex-col lg:flex-row items-center gap-3 lg:gap-0 w-full lg:w-auto">
-                        <button className="bg-[#d33027] hover:bg-red-700 text-white px-8 py-3 rounded-[10px] lg:rounded-l-2xl lg:rounded-r-none font-bold text-lg transition-all active:scale-[0.98] shadow-xl shadow-red-900/40 z-10 w-full lg:w-auto">
-                            Open Account
-                        </button>
-                        <button className="bg-white hover:bg-gray-50 text-gray-500 px-8 py-3 rounded-[10px] lg:rounded-r-2xl lg:rounded-l-none font-bold text-lg border border-[#d33027] lg:border-l-0 lg:-ml-px transition-all active:scale-[0.98] shadow-xl shadow-black/5 w-full lg:w-auto">
-                            Open Demo Account
-                        </button>
+                    <div className="flex flex-col gap-3 w-full sm:w-auto">
+                        <a
+                            href="https://client.rubyfxtrade.com/register/trader"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-[#d33027] hover:bg-red-700 text-white px-10 py-3 rounded-md font-bold text-lg transition-all active:scale-[0.98] shadow-lg shadow-red-900/20 w-max text-center"
+                        >
+                            {t('home.hero.open_live')}
+                        </a>
+                        <a
+                            href="https://client.rubyfxtrade.com/register/trader"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-white hover:bg-gray-50 text-gray-500 px-10 py-3 rounded-md font-medium text-lg border border-[#d33027] transition-all active:scale-[0.98] w-max text-center"
+                        >
+                            {t('home.hero.open_demo')}
+                        </a>
                     </div>
                 </div>
 

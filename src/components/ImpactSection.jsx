@@ -1,10 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { ChevronRight } from 'lucide-react';
 import img1 from '../assets/MAKE/1.jpg';
 import img2 from '../assets/MAKE/2.jpg';
 import img3 from '../assets/MAKE/3.jpg';
 
 const ImpactSection = () => {
+    const { t } = useTranslation();
     return (
         <section className="w-full bg-[#f4f4f4] pt-16 pb-24">
             <div className="container mx-auto px-6 lg:px-12">
@@ -13,13 +15,13 @@ const ImpactSection = () => {
                 <div className="flex flex-col lg:flex-row justify-between items-start mb-12 gap-8">
                     <div className="lg:w-1/2">
                         <h2 className="text-5xl lg:text-6xl font-black uppercase leading-none text-black">
-                            MAKE AN IMPACT <br />
-                            <span className="text-[#ff0000]">WITH RUBY</span>
+                            {t('home.impact.title1')} <br />
+                            <span className="text-[#ff0000]">{t('home.impact.title2')}</span>
                         </h2>
                     </div>
                     <div className="lg:w-1/2">
                         <p className="text-gray-600 text-lg leading-relaxed max-w-xl ml-auto">
-                            Ruby is more than just a broker, we are deeply involved in community support, collaborating with local charities to drive genuine, meaningful change.
+                            {t('home.impact.desc')}
                         </p>
                     </div>
                 </div>
@@ -43,7 +45,7 @@ const ImpactSection = () => {
 
                 {/* Sub-Header */}
                 <h3 className="text-2xl lg:text-4xl font-bold text-center text-gray-800 mb-12">
-                    Ruby supports your trading journey with a genuine care for people.
+                    {t('home.impact.sub_title')}
                 </h3>
 
                 {/* Content Grid */}
@@ -53,7 +55,7 @@ const ImpactSection = () => {
                     <div className="flex flex-col">
                         <div className="relative h-[250px] lg:h-[300px] rounded-lg overflow-hidden mb-6">
                             <span className="absolute top-4 left-4 bg-white text-black text-xs font-bold px-3 py-1 rounded shadow-sm z-10">
-                                Thailand
+                                {t('home.impact.thailand')}
                             </span>
                             <img
                                 src={img2}
@@ -62,7 +64,7 @@ const ImpactSection = () => {
                             />
                         </div>
                         <p className="text-gray-600 leading-relaxed text-sm lg:text-base">
-                            For Ruby, true success includes making a difference. We partner with local groups and charitable organizations to support the people who need it most.
+                            {t('home.impact.card1_desc')}
                         </p>
                     </div>
 
@@ -70,7 +72,7 @@ const ImpactSection = () => {
                     <div className="flex flex-col">
                         <div className="relative h-[250px] lg:h-[300px] rounded-lg overflow-hidden mb-6">
                             <span className="absolute top-4 left-4 bg-white text-black text-xs font-bold px-3 py-1 rounded shadow-sm z-10">
-                                Thailand
+                                {t('home.impact.thailand')}
                             </span>
                             <img
                                 src={img3}
@@ -79,7 +81,7 @@ const ImpactSection = () => {
                             />
                         </div>
                         <p className="text-gray-600 leading-relaxed text-sm lg:text-base">
-                            Ruby is dedicated to more than trading — we’re committed to supporting the communities around us. Through meaningful social initiatives, we work to create positive change where it truly matters."
+                            {t('home.impact.card2_desc')}
                         </p>
                     </div>
                 </div>
@@ -87,7 +89,7 @@ const ImpactSection = () => {
                 {/* Bottom Button */}
                 <div className="flex justify-center">
                     <button className="bg-[#ff0000] hover:bg-red-700 text-white font-bold py-4 px-12 rounded shadow-lg shadow-red-900/20 text-xl transition-all">
-                        Join RUBY
+                        {t('home.community.join_btn')}
                     </button>
                 </div>
 

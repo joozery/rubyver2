@@ -1,27 +1,12 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Facebook, Instagram, Youtube, Send, MessageCircle, Play, Plus, Minus } from 'lucide-react';
 
 const TradingFooter = () => {
+    const { t } = useTranslation();
     const [openIndex, setOpenIndex] = useState(null);
 
-    const faqs = [
-        {
-            question: "What instruments can I trade with RUBY?",
-            answer: "You can trade over 550+ CFD instruments including Forex, Metals, Indices, and Energies."
-        },
-        {
-            question: "What are RUBY market trading hours?",
-            answer: "Trading hours vary by market. Generally, Forex is available 24/5 from Monday to Friday."
-        },
-        {
-            question: "What spreads are available?",
-            answer: "We offer tight floating spreads starting from as low as 0.7 pips."
-        },
-        {
-            question: "What are the leverage and margin rules?",
-            answer: "We provide flexible leverage up to 1:3000. Margin call is at 40% and Stop out is at 20%."
-        }
-    ];
+    const faqs = t('trading_footer.faqs', { returnObjects: true }) || [];
 
     const toggleFaq = (index) => {
         setOpenIndex(openIndex === index ? null : index);
@@ -35,8 +20,8 @@ const TradingFooter = () => {
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 mb-16">
                     <div className="lg:w-1/3">
                         <h2 className="text-4xl lg:text-5xl font-black uppercase leading-none">
-                            <span className="text-[#ff0000]">NEED MORE</span> <br />
-                            <span className="text-black">INFORMATION?</span>
+                            <span className="text-[#ff0000]">{t('trading_footer.title_1')}</span> <br />
+                            <span className="text-black">{t('trading_footer.title_2')}</span>
                         </h2>
                     </div>
                     <div className="lg:w-2/3 border-t border-gray-300">
@@ -66,7 +51,7 @@ const TradingFooter = () => {
                         <div className="flex flex-col md:flex-row gap-8 w-full lg:w-auto">
                             {/* Social Media 1 */}
                             <div className="flex flex-col gap-3">
-                                <span className="text-[10px] font-bold text-gray-500 uppercase tracking-tighter">RUBY ad social media</span>
+                                <span className="text-[10px] font-bold text-gray-500 uppercase tracking-tighter">{t('footer.social_media')}</span>
                                 <div className="flex gap-2">
                                     {[Facebook, Instagram, Youtube, Send].map((Icon, idx) => (
                                         <a key={idx} href="#" className="w-8 h-8 border border-gray-400 rounded flex items-center justify-center text-gray-600 hover:bg-black hover:text-white transition-all">
@@ -78,7 +63,7 @@ const TradingFooter = () => {
 
                             {/* Social Media 2 */}
                             <div className="flex flex-col gap-3">
-                                <span className="text-[10px] font-bold text-gray-500 uppercase tracking-tighter">RUBY ad social media</span>
+                                <span className="text-[10px] font-bold text-gray-500 uppercase tracking-tighter">{t('footer.social_media')}</span>
                                 <div className="flex gap-2">
                                     {[MessageCircle, Send, MessageCircle].map((Icon, idx) => (
                                         <a key={idx} href="#" className="w-8 h-8 border border-gray-400 rounded flex items-center justify-center text-gray-600 hover:bg-black hover:text-white transition-all">
@@ -95,7 +80,7 @@ const TradingFooter = () => {
                             <a href="#" className="flex items-center gap-3 border border-gray-400 rounded-lg px-4 py-2 hover:bg-gray-100 transition-all min-w-[160px] bg-white">
                                 <Play className="text-black fill-black" size={24} />
                                 <div className="flex flex-col">
-                                    <span className="text-[9px] text-gray-500 leading-none uppercase">Get it on the</span>
+                                    <span className="text-[9px] text-gray-500 leading-none uppercase">{t('footer.get_it_on')}</span>
                                     <span className="text-sm text-black font-bold leading-tight">Google Play</span>
                                 </div>
                             </a>
@@ -108,7 +93,7 @@ const TradingFooter = () => {
                                     </svg>
                                 </div>
                                 <div className="flex flex-col">
-                                    <span className="text-[9px] text-gray-500 leading-none uppercase">Get MT4 on the</span>
+                                    <span className="text-[9px] text-gray-500 leading-none uppercase">{t('footer.get_mt4')}</span>
                                     <span className="text-sm text-black font-bold leading-tight">App Store</span>
                                 </div>
                             </a>
@@ -121,7 +106,7 @@ const TradingFooter = () => {
                                     </svg>
                                 </div>
                                 <div className="flex flex-col">
-                                    <span className="text-[9px] text-gray-500 leading-none uppercase">Get MT5 on the</span>
+                                    <span className="text-[9px] text-gray-500 leading-none uppercase">{t('footer.get_mt5')}</span>
                                     <span className="text-sm text-black font-bold leading-tight">App Store</span>
                                 </div>
                             </a>
@@ -132,22 +117,23 @@ const TradingFooter = () => {
                 {/* Bottom Section: Legal Content */}
                 <div className="pt-12 border-t border-gray-300 space-y-6 text-sm leading-relaxed text-gray-600">
                     <p>
-                        RUBYFX GLOBAL LIMITED is a private limited company registered in England and Wales under company number 16723963.
-                        RUBYFX GLOBAL LIMITED operates the Ruby FX brand and manages its online services through:
+                        {t('footer.legal_1')}
                         <a href="https://www.rubyfxtrade.com" className="hover:text-black ml-1 font-medium underline">www.rubyfxtrade.com</a>
                     </p>
 
                     <p>
-                        RUBYFX GLOBAL LIMITED is authorized by the Financial Sector Conduct Authority (FSCA) in South Africa as a Financial Service Provider FSP : 1234567890. RUBYFX GLOBAL LIMITED Operates under
+                        {t('footer.legal_2')}
                         <a href="https://www.rubyfxtrade.com" className="hover:text-black ml-1 font-medium underline">www.rubyfxtrade.com</a>
                     </p>
 
+                    <p>
+                        {t('footer.legal_3')}
+                    </p>
+
                     <div className="pt-4">
-                        <h4 className="font-bold text-black mb-2">Important Notice</h4>
+                        <h4 className="font-bold text-black mb-2">{t('footer.important_notice')}</h4>
                         <p>
-                            RUBYFX GLOBAL LIMITED is registered as a private limited company under the laws of England and Wales.
-                            This registration confirms the company's legal establishment; however, it does not constitute authorization or licensing from any financial regulatory authority in the United Kingdom, including the Financial Conduct Authority (FCA).
-                            Clients should carefully review all regulatory information and risk disclosures provided by Ruby FX before engaging in financial or trading activities. Trading leveraged financial products involves a high level of risk and may not be suitable for all investors.
+                            {t('footer.notice_text')}
                         </p>
                     </div>
                 </div>

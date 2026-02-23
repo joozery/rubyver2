@@ -1,7 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Facebook, Instagram, Youtube, Send, MessageCircle, Play } from 'lucide-react';
 
 const Footer = () => {
+    const { t } = useTranslation();
     return (
         <footer className="bg-black text-[#888888] pt-12 pb-20 px-6 lg:px-12 border-t border-white/10">
             <div className="container mx-auto">
@@ -11,7 +13,7 @@ const Footer = () => {
 
                     {/* Social Media 1 */}
                     <div className="flex flex-col gap-3">
-                        <span className="text-xs font-bold text-white uppercase tracking-tight">RUBY ad social media</span>
+                        <span className="text-xs font-bold text-white uppercase tracking-tight">{t('footer.social_media')}</span>
                         <div className="flex gap-2">
                             {[Facebook, Instagram, Youtube, Send].map((Icon, idx) => (
                                 <a key={idx} href="#" className="w-10 h-10 border border-white/20 rounded flex items-center justify-center text-white hover:bg-white hover:text-black transition-all">
@@ -23,7 +25,7 @@ const Footer = () => {
 
                     {/* Social Media 2 */}
                     <div className="flex flex-col gap-3">
-                        <span className="text-xs font-bold text-white uppercase tracking-tight">RUBY ad social media</span>
+                        <span className="text-xs font-bold text-white uppercase tracking-tight">{t('footer.social_media')}</span>
                         <div className="flex gap-2">
                             {[MessageCircle, Send, MessageCircle].map((Icon, idx) => (
                                 <a key={idx} href="#" className="w-10 h-10 border border-white/20 rounded flex items-center justify-center text-white hover:bg-white hover:text-black transition-all">
@@ -39,7 +41,7 @@ const Footer = () => {
                         <a href="#" className="flex items-center gap-3 border border-white/20 rounded-lg px-4 py-2 hover:bg-white/5 transition-all min-w-[180px]">
                             <Play className="text-white fill-white" size={24} />
                             <div className="flex flex-col">
-                                <span className="text-[10px] text-white leading-none uppercase">Get it on the</span>
+                                <span className="text-[10px] text-white leading-none uppercase">{t('footer.get_it_on')}</span>
                                 <span className="text-base text-white font-bold leading-tight">Google Play</span>
                             </div>
                         </a>
@@ -52,7 +54,7 @@ const Footer = () => {
                                 </svg>
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-[10px] text-white leading-none uppercase">Get MT4 on the</span>
+                                <span className="text-[10px] text-white leading-none uppercase">{t('footer.get_mt4')}</span>
                                 <span className="text-base text-white font-bold leading-tight">App Store</span>
                             </div>
                         </a>
@@ -65,7 +67,7 @@ const Footer = () => {
                                 </svg>
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-[10px] text-white leading-none uppercase">Get MT5 on the</span>
+                                <span className="text-[10px] text-white leading-none uppercase">{t('footer.get_mt5')}</span>
                                 <span className="text-base text-white font-bold leading-tight">App Store</span>
                             </div>
                         </a>
@@ -75,22 +77,23 @@ const Footer = () => {
                 {/* Lower Section: Legal Content */}
                 <div className="space-y-6 max-w-7xl text-xs lg:text-[13px] leading-relaxed">
                     <p>
-                        RUBYFX GLOBAL LIMITED is a private limited company registered in England and Wales under company number 16723963.
-                        RUBYFX GLOBAL LIMITED operates the Ruby FX brand and manages its online services through:
+                        {t('footer.legal_1')}
                         <a href="https://www.rubyfxtrade.com" className="hover:text-white ml-1">www.rubyfxtrade.com</a>
                     </p>
 
                     <p>
-                        RUBYFX GLOBAL LIMITED is authorized by the Financial Sector Conduct Authority (FSCA) in South Africa as a Financial Service Provider FSP : 1234567890. RUBYFX GLOBAL LIMITED Operates under
+                        {t('footer.legal_2')}
                         <a href="https://www.rubyfxtrade.com" className="hover:text-white ml-1">www.rubyfxtrade.com</a>
                     </p>
 
+                    <p>
+                        {t('footer.legal_3')}
+                    </p>
+
                     <div className="pt-4">
-                        <h4 className="font-bold text-white mb-2">Important Notice</h4>
+                        <h4 className="font-bold text-white mb-2">{t('footer.important_notice')}</h4>
                         <p>
-                            RUBYFX GLOBAL LIMITED is registered as a private limited company under the laws of England and Wales.
-                            This registration confirms the company's legal establishment; however, it does not constitute authorization or licensing from any financial regulatory authority in the United Kingdom, including the Financial Conduct Authority (FCA).
-                            Clients should carefully review all regulatory information and risk disclosures provided by Ruby FX before engaging in financial or trading activities. Trading leveraged financial products involves a high level of risk and may not be suitable for all investors.
+                            {t('footer.notice_text')}
                         </p>
                     </div>
                 </div>

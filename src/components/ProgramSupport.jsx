@@ -81,9 +81,14 @@ const ProgramSupport = () => {
 
                 {/* Become Partner Button */}
                 <div className="flex justify-center">
-                    <button className="bg-[#f13a04] hover:bg-red-600 text-white font-bold text-[18px] lg:text-[22px] px-14 py-4 rounded-full shadow-lg transition-transform hover:-translate-y-1">
+                    <a
+                        href="https://client.rubyfxtrade.com/register/trader"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#f13a04] hover:bg-red-600 text-white font-bold text-[18px] lg:text-[22px] px-14 py-4 rounded-full shadow-lg transition-transform hover:-translate-y-1 text-center"
+                    >
                         Become Partner
-                    </button>
+                    </a>
                 </div>
 
             </div>

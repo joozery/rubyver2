@@ -1,10 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { ChevronRight, ChevronLeft, ChevronRight as ArrowRight, Instagram, Facebook, Youtube } from 'lucide-react';
 import joinImg1 from '../assets/jhon/Rectangle 6.png';
 import joinImg2 from '../assets/jhon/Rectangle 9.png';
 import joinImg3 from '../assets/jhon/Rectangle 10.png';
 
 const JoinCommunitySection = () => {
+    const { t } = useTranslation();
     return (
         <section className="w-full bg-[#f4f4f4] py-16 lg:py-24">
             <div className="container mx-auto px-6 lg:px-12">
@@ -14,10 +16,10 @@ const JoinCommunitySection = () => {
                     <div className="w-3 h-full min-h-[80px] bg-[#0033ff] mr-6 shrink-0"></div>
                     <div>
                         <h2 className="text-4xl lg:text-6xl font-black text-[#0033ff] uppercase leading-none mb-4">
-                            JOIN THE RUBY COMMUNITY
+                            {t('home.community.title')}
                         </h2>
                         <p className="text-gray-600 text-lg max-w-2xl font-medium">
-                            Connect and grow with thousands of engaged enthusiasts and industry professionals in the Forex trading world.
+                            {t('home.community.desc')}
                         </p>
                     </div>
                 </div>
@@ -50,7 +52,7 @@ const JoinCommunitySection = () => {
                     {/* Row 1 Right: Text */}
                     <div className="flex items-center">
                         <p className="text-2xl lg:text-3xl font-medium text-gray-700 leading-snug">
-                            We attend major forex exhibitions and host exclusive events to connect directly with our trading community.
+                            {t('home.community.row1_text')}
                         </p>
                     </div>
 
@@ -65,10 +67,10 @@ const JoinCommunitySection = () => {
 
                         <div className="absolute top-10 left-10 max-w-xs">
                             <h3 className="text-white text-2xl font-bold uppercase leading-tight mb-8 drop-shadow-md">
-                                Join Online Sessions with RB Analysts.
+                                {t('home.community.row2_title')}
                             </h3>
                             <button className="bg-white text-black px-4 py-2 rounded text-sm font-bold flex items-center hover:bg-gray-100 transition">
-                                Watch live streams <ChevronRight size={14} className="ml-1" />
+                                {t('home.community.row2_btn')} <ChevronRight size={14} className="ml-1" />
                             </button>
                         </div>
                     </div>
@@ -76,7 +78,7 @@ const JoinCommunitySection = () => {
                     {/* Row 2 Right: Social Media Card */}
                     <div className="bg-white p-10 flex flex-col justify-center border-b-[6px] border-[#0033ff] shadow-sm h-full max-h-[350px]">
                         <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-                            Link up with traders on our social media channels. Network online to stay on top of market updates, economic releases, and emerging trading trends.
+                            {t('home.community.row2_card_desc')}
                         </p>
                         <div className="flex gap-4">
                             <a href="#" className="w-12 h-12 bg-gray-300 rounded flex items-center justify-center text-white hover:bg-[#0033ff] transition-colors">
@@ -104,26 +106,31 @@ const JoinCommunitySection = () => {
                     {/* Row 3 Right: United With Partners Info */}
                     <div className="flex flex-col justify-center py-4">
                         <h3 className="text-2xl lg:text-3xl font-bold text-gray-800 uppercase mb-4">
-                            United With Partners
+                            {t('home.community.row3_title')}
                         </h3>
                         <p className="text-gray-600 mb-8 leading-relaxed">
-                            Over 700,000 partners put their trust in us through RUBY Partnership Programs. Together, we form a community focused on growth within the trading world.
+                            {t('home.community.row3_desc')}
                         </p>
 
                         <div className="flex gap-12 mb-10">
                             <div>
                                 <div className="text-3xl font-bold text-gray-800">700,000+</div>
-                                <div className="text-xs text-gray-500 uppercase tracking-wide">Partners</div>
+                                <div className="text-xs text-gray-500 uppercase tracking-wide">{t('home.community.partners')}</div>
                             </div>
                             <div>
                                 <div className="text-3xl font-bold text-gray-800">$1,500,000</div>
-                                <div className="text-xs text-gray-500 uppercase tracking-wide">Commission paid monthly</div>
+                                <div className="text-xs text-gray-500 uppercase tracking-wide">{t('home.community.commission')}</div>
                             </div>
                         </div>
 
-                        <button className="bg-[#d33027] hover:bg-red-700 text-white px-8 py-3 rounded text-lg font-bold w-full lg:w-max transition-colors shadow-lg shadow-red-900/20">
-                            Join RUBY
-                        </button>
+                        <a
+                            href="https://client.rubyfxtrade.com/register/trader"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-[#d33027] hover:bg-red-700 text-white px-8 py-3 rounded text-lg font-bold w-full lg:w-max transition-colors shadow-lg shadow-red-900/20 text-center"
+                        >
+                            {t('home.community.join_btn')}
+                        </a>
                     </div>
 
                 </div>

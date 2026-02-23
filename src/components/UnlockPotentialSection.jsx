@@ -79,10 +79,15 @@ const UnlockPotentialSection = () => {
                     </div>
 
                     <div className="mt-14">
-                        <button className="flex items-center gap-4 border border-gray-400 rounded-lg px-8 py-2.5 text-white font-medium hover:bg-white/10 transition-all text-lg group">
+                        <a
+                            href="https://client.rubyfxtrade.com/register/trader"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-4 border border-gray-400 rounded-lg px-8 py-2.5 text-white font-medium hover:bg-white/10 transition-all text-lg group w-max"
+                        >
                             See all conditions
                             <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                        </button>
+                        </a>
                     </div>
                 </div>
 

@@ -17,9 +17,14 @@ const LoyaltyCTA = () => {
                         <p className="text-white text-[18px] md:text-[22px] font-medium mb-10 max-w-[500px] drop-shadow-md">
                             Join thousands of traders who are already enjoying exclusive rewards.
                         </p>
-                        <button className="bg-[#f13010] hover:bg-[#d6290e] text-white font-bold text-[18px] px-14 py-4 rounded-xl shadow-lg transition-transform hover:-translate-y-1">
+                        <a
+                            href="https://client.rubyfxtrade.com/register/trader"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-[#f13010] hover:bg-[#d6290e] text-white font-bold text-[18px] px-14 py-4 rounded-xl shadow-lg transition-transform hover:-translate-y-1 text-center"
+                        >
                             Join Now
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

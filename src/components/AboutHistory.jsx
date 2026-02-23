@@ -20,9 +20,14 @@ const AboutHistory = () => {
                         WE'VE DONE A LOT<br />
                         AND <span className="text-[#db2727]">WE KEEP GOING</span>
                     </h2>
-                    <button className="bg-[#db2727] hover:bg-red-700 text-white font-semibold text-lg px-8 py-3 rounded-lg transition-colors w-max">
+                    <a
+                        href="https://client.rubyfxtrade.com/register/trader"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#db2727] hover:bg-red-700 text-white font-semibold text-lg px-8 py-3 rounded-lg transition-colors w-max flex items-center justify-center text-center"
+                    >
                         Trade with RUBY
-                    </button>
+                    </a>
                 </div>
 
                 {/* Year Selector */}

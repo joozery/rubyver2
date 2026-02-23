@@ -264,12 +264,22 @@ const Navbar = () => {
                     <div className="hidden lg:block h-20 w-3 bg-red-700 -skew-x-[20deg] mr-8" />
 
                     <div className="flex items-center space-x-2 lg:space-x-4">
-                        <button className="bg-red-700 hover:bg-red-800 text-white px-3 lg:px-5 h-8 rounded-[10px] text-sm lg:text-base font-normal transition-all flex items-center justify-center whitespace-nowrap">
+                        <a
+                            href="https://client.rubyfxtrade.com/register/trader"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-red-700 hover:bg-red-800 text-white px-3 lg:px-5 h-8 rounded-[10px] text-sm lg:text-base font-normal transition-all flex items-center justify-center whitespace-nowrap"
+                        >
                             {t('nav.open_account')}
-                        </button>
-                        <button className="hidden lg:flex border border-red-700 hover:bg-red-700/10 text-white px-5 h-8 rounded-[10px] text-base font-normal transition-all items-center justify-center whitespace-nowrap">
+                        </a>
+                        <a
+                            href="https://client.rubyfxtrade.com/login"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hidden lg:flex border border-red-700 hover:bg-red-700/10 text-white px-5 h-8 rounded-[10px] text-base font-normal transition-all items-center justify-center whitespace-nowrap"
+                        >
                             {t('nav.login')}
-                        </button>
+                        </a>
 
                         {/* Language Selector */}
                         <div className="relative ml-2 lg:ml-6">
@@ -382,12 +392,22 @@ const Navbar = () => {
 
                         {/* CTA Buttons for Mobile */}
                         <div className="flex flex-col space-y-3 pt-4 pb-10">
-                            <button className="bg-red-700 hover:bg-red-800 text-white w-full py-4 rounded-[10px] text-lg font-bold transition-all">
+                            <a
+                                href="https://client.rubyfxtrade.com/register/trader"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-red-700 hover:bg-red-800 text-white w-full py-4 rounded-[10px] text-lg font-bold transition-all text-center"
+                            >
                                 {t('nav.open_account')}
-                            </button>
-                            <button className="border border-red-700 hover:bg-red-700/10 text-white w-full py-4 rounded-[10px] text-lg font-bold transition-all">
+                            </a>
+                            <a
+                                href="https://client.rubyfxtrade.com/login"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="border border-red-700 hover:bg-red-700/10 text-white w-full py-4 rounded-[10px] text-lg font-bold transition-all text-center"
+                            >
                                 {t('nav.login')}
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -15,9 +15,14 @@ const MultiLevelCTA = () => {
                 <p className="text-white text-[18px] md:text-[22px] font-medium mb-10 max-w-[800px] drop-shadow-md">
                     Join the RUBY Multi-Level Partnership to discover a rewarding opportunity.
                 </p>
-                <button className="bg-[#ff0000] hover:bg-red-700 text-white font-medium text-[18px] px-14 py-4 rounded-xl shadow-[0_4px_14px_0_rgba(255,0,0,0.39)] transition-transform hover:-translate-y-1">
+                <a
+                    href="https://client.rubyfxtrade.com/register/trader"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-[#ff0000] hover:bg-red-700 text-white font-medium text-[18px] px-14 py-4 rounded-xl shadow-[0_4px_14px_0_rgba(255,0,0,0.39)] transition-transform hover:-translate-y-1 text-center"
+                >
                     Join Now
-                </button>
+                </a>
             </div>
         </section>
     );

@@ -68,9 +68,14 @@ const AboutUpdates = () => {
 
                 {/* Footer Button */}
                 <div className="flex justify-center mt-6 lg:mt-8 pt-10 border-t border-white/10">
-                    <button className="bg-[#e42e2e] hover:bg-red-600 text-white font-semibold text-[17px] w-full max-w-[360px] py-3.5 rounded-lg transition-colors shadow-lg">
+                    <a
+                        href="https://client.rubyfxtrade.com/register/trader"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#e42e2e] hover:bg-red-600 text-white font-semibold text-[17px] w-full max-w-[360px] py-3.5 rounded-lg transition-colors shadow-lg flex items-center justify-center text-center"
+                    >
                         Join RUBY
-                    </button>
+                    </a>
                 </div>
 
             </div>

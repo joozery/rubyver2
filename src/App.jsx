@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Home from './pages/Home';
 import Trading from './pages/Trading';
 import Deposits from './pages/Deposits';
@@ -19,8 +20,20 @@ import Program from './pages/Program';
 import MultiLevel from './pages/MultiLevel';
 import Loyalty from './pages/Loyalty';
 
+
 function App() {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    if (i18n.language === 'th') {
+      document.body.classList.add('lang-th');
+    } else {
+      document.body.classList.remove('lang-th');
+    }
+  }, [i18n.language]);
+
   return (
+
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
