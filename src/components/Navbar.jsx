@@ -56,42 +56,42 @@ const Navbar = () => {
                                     <div className="absolute top-[60px] left-[-20px] bg-white w-[374px] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] py-10 px-[22px] grid grid-cols-[58%_42%] gap-x-[10px] border border-gray-100 animate-in fade-in slide-in-from-top-4 duration-300 z-50">
                                         {/* Conditions Column */}
                                         <div className="border-r border-gray-50">
-                                            <h4 className="text-[#a0a0a0] font-bold text-sm uppercase mb-3 tracking-wider">Conditions</h4>
+                                            <h4 className="text-[#a0a0a0] font-bold text-sm uppercase mb-3 tracking-wider">{t('nav.trading')}</h4>
                                             <div className="space-y-3">
                                                 <Link
                                                     to="/trading-conditions"
                                                     onClick={() => setIsTradingOpen(false)}
                                                     className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors"
                                                 >
-                                                    Trading Conditions
+                                                    {t('nav.conditions')}
                                                 </Link>
                                                 <Link
                                                     to="/deposits"
                                                     onClick={() => setIsTradingOpen(false)}
                                                     className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors"
                                                 >
-                                                    Deposits & Withdrawals
+                                                    {t('nav.deposits_withdrawals')}
                                                 </Link>
                                             </div>
                                         </div>
 
                                         {/* Platforms Column */}
                                         <div className="pl-[10px]">
-                                            <h4 className="text-[#a0a0a0] font-bold text-sm uppercase mb-3 tracking-wider">Platforms</h4>
+                                            <h4 className="text-[#a0a0a0] font-bold text-sm uppercase mb-3 tracking-wider">{t('nav.platforms')}</h4>
                                             <div className="space-y-3">
                                                 <Link
                                                     to="/ruby-app"
                                                     onClick={() => setIsTradingOpen(false)}
                                                     className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left uppercase"
                                                 >
-                                                    RUBY APP
+                                                    {t('nav.ruby_app')}
                                                 </Link>
                                                 <Link
                                                     to="/metatrader-5"
                                                     onClick={() => setIsTradingOpen(false)}
                                                     className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left uppercase whitespace-nowrap"
                                                 >
-                                                    METATRADER 5
+                                                    {t('nav.metatrader_5')}
                                                 </Link>
                                             </div>
                                         </div>
@@ -106,7 +106,7 @@ const Navbar = () => {
                                 onClick={() => { setIsMarketsOpen(!isMarketsOpen); setIsTradingOpen(false); setIsAnalyticsOpen(false); setIsCompanyOpen(false); setIsPartnershipOpen(false); }}
                                 className={`flex items-center space-x-1.5 transition-colors py-8 ${isMarketsOpen ? 'text-red-500' : 'hover:text-red-500'}`}
                             >
-                                <span>Markets</span>
+                                <span>{t('nav.markets')}</span>
                                 <ChevronDown size={14} className={`opacity-80 transition-transform duration-200 ${isMarketsOpen ? 'rotate-180' : ''}`} />
                             </button>
 
@@ -119,26 +119,17 @@ const Navbar = () => {
                                         onClick={() => setIsMarketsOpen(false)}
                                     />
                                     <div className="absolute top-[60px] left-[-20px] bg-white w-[240px] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] py-10 px-[22px] flex flex-col border border-gray-100 animate-in fade-in slide-in-from-top-4 duration-300 z-50">
-                                        <h4 className="text-[#a0a0a0] font-bold text-sm uppercase mb-3 tracking-wider">Markets</h4>
+                                        <h4 className="text-[#a0a0a0] font-bold text-sm uppercase mb-3 tracking-wider">{t('nav.markets')}</h4>
                                         <div className="space-y-3">
                                             {['Forex', 'Metals', 'Indices', 'Energies', 'Stocks', 'Forex Exotic'].map((item) => (
-                                                ['Forex', 'Metals', 'Indices', 'Energies', 'Stocks', 'Forex Exotic'].includes(item) ? (
-                                                    <Link
-                                                        key={item}
-                                                        to={`/${item.toLowerCase().replace(' ', '-')}`}
-                                                        onClick={() => setIsMarketsOpen(false)}
-                                                        className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left"
-                                                    >
-                                                        {item}
-                                                    </Link>
-                                                ) : (
-                                                    <button
-                                                        key={item}
-                                                        className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left"
-                                                    >
-                                                        {item}
-                                                    </button>
-                                                )
+                                                <Link
+                                                    key={item}
+                                                    to={`/${item.toLowerCase().replace(' ', '-')}`}
+                                                    onClick={() => setIsMarketsOpen(false)}
+                                                    className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left"
+                                                >
+                                                    {item}
+                                                </Link>
                                             ))}
                                         </div>
                                     </div>
@@ -152,7 +143,7 @@ const Navbar = () => {
                                 onClick={() => { setIsAnalyticsOpen(!isAnalyticsOpen); setIsTradingOpen(false); setIsMarketsOpen(false); setIsCompanyOpen(false); setIsPartnershipOpen(false); }}
                                 className={`flex items-center space-x-1.5 transition-colors py-8 ${isAnalyticsOpen ? 'text-red-500' : 'hover:text-red-500'}`}
                             >
-                                <span>Analytics & Education</span>
+                                <span>{t('nav.analytics_edu')}</span>
                                 <ChevronDown size={14} className={`opacity-80 transition-transform duration-200 ${isAnalyticsOpen ? 'rotate-180' : ''}`} />
                             </button>
 
@@ -174,7 +165,7 @@ const Navbar = () => {
                                                     onClick={() => setIsAnalyticsOpen(false)}
                                                     className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left"
                                                 >
-                                                    Market Analytics
+                                                    {t('nav.market_analytics')}
                                                 </Link>
                                             </div>
                                         </div>
@@ -188,7 +179,7 @@ const Navbar = () => {
                                                     onClick={() => setIsAnalyticsOpen(false)}
                                                     className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap"
                                                 >
-                                                    RUBY Academy
+                                                    {t('nav.ruby_academy')}
                                                 </Link>
                                             </div>
                                         </div>
@@ -216,13 +207,13 @@ const Navbar = () => {
                                         onClick={() => setIsCompanyOpen(false)}
                                     />
                                     <div className="absolute top-[60px] left-[-20px] bg-white w-[240px] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] py-10 px-[22px] flex flex-col border border-gray-100 animate-in fade-in slide-in-from-top-4 duration-300 z-50">
-                                        <h4 className="text-[#a0a0a0] font-bold text-sm uppercase mb-3 tracking-wider">Company</h4>
+                                        <h4 className="text-[#a0a0a0] font-bold text-sm uppercase mb-3 tracking-wider">{t('nav.company')}</h4>
                                         <div className="space-y-3">
-                                            <Link to="/about" className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
-                                                About RUBY
+                                            <Link to="/about" onClick={() => setIsCompanyOpen(false)} className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
+                                                {t('nav.about')}
                                             </Link>
-                                            <Link to="/support" className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
-                                                Support
+                                            <Link to="/support" onClick={() => setIsCompanyOpen(false)} className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
+                                                {t('nav.support')}
                                             </Link>
                                         </div>
                                     </div>
@@ -236,7 +227,7 @@ const Navbar = () => {
                                 onClick={() => { setIsPartnershipOpen(!isPartnershipOpen); setIsTradingOpen(false); setIsMarketsOpen(false); setIsAnalyticsOpen(false); setIsCompanyOpen(false); }}
                                 className={`flex items-center space-x-1.5 transition-colors py-8 ${isPartnershipOpen ? 'text-red-500' : 'hover:text-red-500'}`}
                             >
-                                <span>Rub Partnership Programs</span>
+                                <span>{t('nav.partnership')}</span>
                                 <ChevronDown size={14} className={`opacity-80 transition-transform duration-200 ${isPartnershipOpen ? 'rotate-180' : ''}`} />
                             </button>
 
@@ -249,23 +240,22 @@ const Navbar = () => {
                                         onClick={() => setIsPartnershipOpen(false)}
                                     />
                                     <div className="absolute top-[60px] left-[-20px] bg-white w-[300px] rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] py-10 px-[22px] flex flex-col border border-gray-100 animate-in fade-in slide-in-from-top-4 duration-300 z-50">
-                                        <h4 className="text-[#a0a0a0] font-bold text-sm uppercase mb-3 tracking-wider whitespace-nowrap">RUBY Partnership Programs</h4>
+                                        <h4 className="text-[#a0a0a0] font-bold text-sm uppercase mb-3 tracking-wider whitespace-nowrap">{t('nav.partnership')}</h4>
                                         <div className="space-y-3">
-                                            <Link to="/ruby-ib-program" className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
-                                                RUBY IB Program
+                                            <Link to="/ruby-ib-program" onClick={() => setIsPartnershipOpen(false)} className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
+                                                {t('nav.ib_program')}
                                             </Link>
-                                            <Link to="/ruby-multi-level" className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
-                                                RUBY Multi-level Partnership
+                                            <Link to="/ruby-multi-level" onClick={() => setIsPartnershipOpen(false)} className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
+                                                {t('nav.multi_level')}
                                             </Link>
-                                            <Link to="/ruby-forex-loyalty" className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
-                                                RUBY Forex Loyalty
+                                            <Link to="/ruby-forex-loyalty" onClick={() => setIsPartnershipOpen(false)} className="block text-black font-bold text-[15px] hover:text-red-600 transition-colors text-left whitespace-nowrap">
+                                                {t('nav.loyalty')}
                                             </Link>
                                         </div>
                                     </div>
                                 </>
                             )}
                         </div>
-                        {/* Bonus Link Removed */}
                     </div>
                 </div>
 
@@ -319,6 +309,89 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Mobile Menu Overlay */}
+            {isMobileMenuOpen && (
+                <div className="lg:hidden fixed inset-x-0 bottom-0 top-[80px] bg-black z-40 overflow-y-auto animate-in fade-in duration-300 border-t border-white/5">
+                    <div className="flex flex-col p-6 space-y-6">
+                        {/* Trading Section */}
+                        <div className="space-y-4">
+                            <h4 className="text-[#a0a0a0] font-bold text-sm uppercase tracking-wider border-b border-gray-800 pb-2">
+                                {t('nav.trading')}
+                            </h4>
+                            <div className="flex flex-col space-y-3 pl-2">
+                                <Link to="/trading-conditions" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium text-lg hover:text-red-500">{t('nav.conditions')}</Link>
+                                <Link to="/deposits" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium text-lg hover:text-red-500">{t('nav.deposits_withdrawals')}</Link>
+                                <Link to="/ruby-app" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium text-lg hover:text-red-500">{t('nav.ruby_app')}</Link>
+                                <Link to="/metatrader-5" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium text-lg hover:text-red-500">{t('nav.metatrader_5')}</Link>
+                            </div>
+                        </div>
+
+                        {/* Markets Section */}
+                        <div className="space-y-4">
+                            <h4 className="text-[#a0a0a0] font-bold text-sm uppercase tracking-wider border-b border-gray-800 pb-2">
+                                {t('nav.markets')}
+                            </h4>
+                            <div className="grid grid-cols-2 gap-4 pl-2">
+                                {['Forex', 'Metals', 'Indices', 'Energies', 'Stocks', 'Forex Exotic'].map((item) => (
+                                    <Link
+                                        key={item}
+                                        to={`/${item.toLowerCase().replace(' ', '-')}`}
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                        className="text-white font-medium text-lg hover:text-red-500"
+                                    >
+                                        {item}
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Partnership Section */}
+                        <div className="space-y-4">
+                            <h4 className="text-[#a0a0a0] font-bold text-sm uppercase tracking-wider border-b border-gray-800 pb-2">
+                                {t('nav.partnership')}
+                            </h4>
+                            <div className="flex flex-col space-y-3 pl-2">
+                                <Link to="/ruby-ib-program" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium text-lg hover:text-red-500">{t('nav.ib_program')}</Link>
+                                <Link to="/ruby-multi-level" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium text-lg hover:text-red-500">{t('nav.multi_level')}</Link>
+                                <Link to="/ruby-forex-loyalty" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium text-lg hover:text-red-500">{t('nav.loyalty')}</Link>
+                            </div>
+                        </div>
+
+                        {/* Education Section */}
+                        <div className="space-y-4">
+                            <h4 className="text-[#a0a0a0] font-bold text-sm uppercase tracking-wider border-b border-gray-800 pb-2">
+                                {t('nav.analytics_edu')}
+                            </h4>
+                            <div className="flex flex-col space-y-3 pl-2">
+                                <Link to="/market-analytics" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium text-lg hover:text-red-500">{t('nav.market_analytics')}</Link>
+                                <Link to="/academy" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium text-lg hover:text-red-500">{t('nav.ruby_academy')}</Link>
+                            </div>
+                        </div>
+
+                        {/* Company Section */}
+                        <div className="space-y-4">
+                            <h4 className="text-[#a0a0a0] font-bold text-sm uppercase tracking-wider border-b border-gray-800 pb-2">
+                                {t('nav.company')}
+                            </h4>
+                            <div className="flex flex-col space-y-3 pl-2">
+                                <Link to="/about" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium text-lg hover:text-red-500">{t('nav.about')}</Link>
+                                <Link to="/support" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-medium text-lg hover:text-red-500">{t('nav.support')}</Link>
+                            </div>
+                        </div>
+
+                        {/* CTA Buttons for Mobile */}
+                        <div className="flex flex-col space-y-3 pt-4 pb-10">
+                            <button className="bg-red-700 hover:bg-red-800 text-white w-full py-4 rounded-[10px] text-lg font-bold transition-all">
+                                {t('nav.open_account')}
+                            </button>
+                            <button className="border border-red-700 hover:bg-red-700/10 text-white w-full py-4 rounded-[10px] text-lg font-bold transition-all">
+                                {t('nav.login')}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </nav>
     );
 };

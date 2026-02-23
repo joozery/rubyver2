@@ -7,11 +7,22 @@ const resources = {
         translation: {
             "nav": {
                 "trading": "Trading",
-                "analytics": "Analytics & Education",
+                "markets": "Markets",
+                "analytics_edu": "Analytics & Education",
                 "company": "Company",
                 "partnership": "Partnership Programs",
-                "deposits": "Deposits & Withdrawals",
-                "bonus": "Get the Deposit Bonus",
+                "conditions": "Trading Conditions",
+                "deposits_withdrawals": "Deposits & Withdrawals",
+                "platforms": "Platforms",
+                "ruby_app": "RUBY APP",
+                "metatrader_5": "METATRADER 5",
+                "market_analytics": "Market Analytics",
+                "ruby_academy": "RUBY Academy",
+                "about": "About RUBY",
+                "support": "Support",
+                "ib_program": "RUBY IB Program",
+                "multi_level": "RUBY Multi-level Partnership",
+                "loyalty": "RUBY Forex Loyalty",
                 "open_account": "Open Account",
                 "login": "Login"
             }
@@ -21,11 +32,22 @@ const resources = {
         translation: {
             "nav": {
                 "trading": "การเทรด",
-                "analytics": "บทวิเคราะห์และการศึกษา",
+                "markets": "ตลาด",
+                "analytics_edu": "บทวิเคราะห์และการศึกษา",
                 "company": "บริษัท",
                 "partnership": "โปรแกรมพันธมิตร",
-                "deposits": "การฝากและถอนเงิน",
-                "bonus": "รับโบนัสเงินฝาก",
+                "conditions": "เงื่อนไขการเทรด",
+                "deposits_withdrawals": "การฝากและถอนเงิน",
+                "platforms": "แพลตฟอร์ม",
+                "ruby_app": "RUBY APP",
+                "metatrader_5": "METATRADER 5",
+                "market_analytics": "บทวิเคราะห์ตลาด",
+                "ruby_academy": "RUBY Academy",
+                "about": "เกี่ยวกับ RUBY",
+                "support": "ฝ่ายสนับสนุน",
+                "ib_program": "RUBY IB โปรแกรม",
+                "multi_level": "RUBY พาร์ทเนอร์หลายระดับ",
+                "loyalty": "RUBY ลอยัลตี้โปรแกรม",
                 "open_account": "เปิดบัญชี",
                 "login": "เข้าสู่ระบบ"
             }
