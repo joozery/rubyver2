@@ -158,6 +158,187 @@ const resources = {
                         "answer": "We provide flexible leverage up to 1:3000. Margin call is at 40% and Stop out is at 20%."
                     }
                 ]
+            },
+            "deposits_page": {
+                "hero": {
+                    "title1": "DEPOSITS",
+                    "title_and": "AND",
+                    "title2": "WITHDRAWALS",
+                    "desc": "Every transaction you make with RubyFX is fast, convenient, and protected.",
+                    "btn": "Deposit to trade",
+                    "card1": "UNLIMITED TRANSACTIONS UPON FULL VERIFICATION",
+                    "card2": "COMPREHENSIVE GLOBAL AND LOCAL PAYMENT OPTIONS",
+                    "card3": "ZERO COMMISSION FEES",
+                    "card4": "INSTANT AUTOMATED WITHDRAWALS AVAILABLE"
+                }
+            },
+            "payment": {
+                "title1": "200+",
+                "title2": "Payment methods",
+                "deposit": "To deposit",
+                "withdraw": "To withdraw",
+                "country": "Thailand",
+                "btn": "Make deposit",
+                "fund_btn": "Fund account",
+                "tags": {
+                    "new": "NEW",
+                    "need_verif": "NEED VERIFICATION"
+                },
+                "details": {
+                    "commission": "Commission",
+                    "time": "Avg. time",
+                    "limits": "Limits",
+                    "instantly": "Instantly",
+                    "visa_limits": "From 5 to 10,000 EUR",
+                    "sticpay_limits": "From 5 USD",
+                    "qr_limits": "From 350 to 2,000,000"
+                },
+                "bonus": {
+                    "title1": "DOUBLE",
+                    "title2": "YOUR FIRST",
+                    "title3": "DEPOSIT",
+                    "title4": "TODAY",
+                    "desc": "Enjoy 100% bonus now, then up to 60% extra on every deposit over $100.",
+                    "btn": "Go to bonus"
+                },
+                "protection": {
+                    "title1": "YOUR FUNDS ARE PROTECTED",
+                    "title2": "WITH RUBY",
+                    "items": [
+                        {
+                            "title": "SEGREGATED ACCOUNTS",
+                            "desc": "Client funds are maintained in insured Tier-1 banking institutions, entirely separate from company operating capital."
+                        },
+                        {
+                            "title": "SECURE WITHDRAWALS",
+                            "desc": "All withdrawals are protected through one-time password (OTP) verification procedures."
+                        },
+                        {
+                            "title": "PCI DSS COMPLIANCE",
+                            "desc": "We adhere to the Payment Card Industry Data Security Standard to minimize card-related risks and safeguard sensitive information."
+                        },
+                        {
+                            "title": "3D SECURE PAYMENTS",
+                            "desc": "An additional SMS authentication step ensures that only the authorized account holder can approve online card transactions."
+                        }
+                    ]
+                }
+            },
+            "steps": {
+                "title": "DEPOSIT IN THREE STEPS",
+                "btn": "Open Account",
+                "items": [
+                    {
+                        "number": "Step 1",
+                        "title": "VERIFY YOUR ACCOUNT",
+                        "desc": "Download the RubyFX application or select \"Open Account\" to complete registration and identity verification."
+                    },
+                    {
+                        "number": "Step 2",
+                        "title": "SELECT A PAYMENT METHOD",
+                        "desc": "Click the <span class=\"text-[#00CC00]\">\"Deposit\"</span> button to access both international and local payment channels."
+                    },
+                    {
+                        "number": "Step 3",
+                        "title": "PROVIDE THE REQUIRED INFORMATION",
+                        "desc": "Follow the on-screen instructions and submit the necessary details to complete your transaction."
+                    }
+                ]
+            },
+            "unlock_potential": {
+                "title1": "OUR CONDITIONS UNLOCK",
+                "title2": "YOUR POTENTIAL",
+                "desc1": "Order execution from 0.01 seconds.",
+                "desc2": "Floating spreads from 0.7 pips.",
+                "desc3": "Demo and Swap Free options available.",
+                "items": [
+                    {
+                        "label": "Open positions",
+                        "value": "up to 500, including 200 pending orders"
+                    },
+                    {
+                        "label": "Flexible leverage",
+                        "value": "up to 1:3000"
+                    },
+                    {
+                        "label": "Initial deposit",
+                        "value": "from $5"
+                    },
+                    {
+                        "label": "Order volume",
+                        "value": "from 0.01 to 500 lots"
+                    },
+                    {
+                        "label": "Margin call",
+                        "value": "40%"
+                    },
+                    {
+                        "label": "Stop out",
+                        "value": "20%"
+                    }
+                ],
+                "btn": "See all conditions"
+            },
+            "ruby_app": {
+                "hero": {
+                    "title1": "TRADE SEAMLESSLY",
+                    "title2": "ANYWHERE WITH",
+                    "title3": "THE RUBY APP",
+                    "desc": "A refined, secure, and intuitive platform designed to help you unlock your full trading potential.",
+                    "btn": "GET RUBY APP"
+                },
+                "features": {
+                    "title1": "THE APP THAT MAKES",
+                    "title2": "YOU",
+                    "title3": "STRONGER",
+                    "card1_title1": "ENTER HIGH-POTENTIAL",
+                    "card1_title2": "TRADES INSTANTLY",
+                    "card1_desc": "Analyze market trends with intuitive charting tools, manage orders effortlessly, and access the market anytime, anywhere."
+                },
+                "onboarding": {
+                    "title": "START TRADING WITHOUT DELAY",
+                    "desc": "Enjoy swift onboarding with quick registration, seamless verification, and efficient deposit processing."
+                },
+                "stats": {
+                    "title": "ACCESS YOUR TRADING STATS",
+                    "desc": "View your equity, margin levels, free margin, and floating P&L in a single tap to assess potential opportunities with precision."
+                },
+                "charts": {
+                    "title1": "PREVIEW AND PERSONALIZE",
+                    "title2": "YOUR CHARTS",
+                    "desc": "Access charts throughout the app and configure them to your preferences. Leverage over 90 indicators to identify trends and support informed decision-making."
+                },
+                "everything": {
+                    "title1": "EVERYTHING FOR TRADING",
+                    "title2": "IN ONE APP",
+                    "items": [
+                        {
+                            "title": "ACCURATE CHARTS",
+                            "desc": "Analyze price movements on charts provided directly by"
+                        },
+                        {
+                            "title": "24/7 SUPPORT",
+                            "desc": "Get a reply in under a minute, right in the app."
+                        },
+                        {
+                            "title": "DATA SECURITY",
+                            "desc": "Stay protected from hacking and data theft."
+                        },
+                        {
+                            "title": "RUBY UPDATES",
+                            "desc": "Receive trading insights, promotions, and transaction notifications on the go."
+                        }
+                    ],
+                    "btn": "Download RUBY app"
+                },
+                "buttons": {
+                    "google": "Get it on the",
+                    "apple_mt5": "Get MT5 on the",
+                    "apple_mt4": "Get MT4 on the",
+                    "apk": "Download APK",
+                    "app_store": "App Store",
+                    "play_store": "Google Play"
+                }
             }
         }
     },
@@ -316,6 +497,187 @@ const resources = {
                         "answer": "เรามีเลเวอเรจที่ยืดหยุ่นได้สูงสุดถึง 1:3000 โดย Margin call อยู่ที่ 40% และ Stop out อยู่ที่ 20%"
                     }
                 ]
+            },
+            "deposits_page": {
+                "hero": {
+                    "title1": "การฝาก",
+                    "title_and": "และ",
+                    "title2": "การถอนเงิน",
+                    "desc": "ทุกธุรกรรมที่คุณทำกับ RubyFX รวดเร็ว สะดวกสบาย และปลอดภัย",
+                    "btn": "ฝากเงินเพื่อเทรด",
+                    "card1": "ทำธุรกรรมได้ไม่จำกัดเมื่อยืนยันตัวตนสำเร็จ",
+                    "card2": "ครอบคลุมตัวเลือกการชำระเงินทั้งในประเทศและระดับโลก",
+                    "card3": "ไม่มีค่าธรรมเนียมคอมมิชชั่น",
+                    "card4": "รองรับระบบฝากถอนอัตโนมัติรวดเร็วทันใจ"
+                }
+            },
+            "payment": {
+                "title1": "200+",
+                "title2": "ช่องทางการชำระเงิน",
+                "deposit": "ฝากเงิน",
+                "withdraw": "ถอนเงิน",
+                "country": "ประเทศไทย",
+                "btn": "ทำการฝากเงิน",
+                "fund_btn": "เติมเงินเข้าบัญชี",
+                "tags": {
+                    "new": "ใหม่",
+                    "need_verif": "ต้องยืนยันตัวตน"
+                },
+                "details": {
+                    "commission": "ค่าธรรมเนียม",
+                    "time": "เวลาเฉลี่ย",
+                    "limits": "ขีดจำกัด",
+                    "instantly": "ทันที",
+                    "visa_limits": "ตั้งแต่ 5 ถึง 10,000 EUR",
+                    "sticpay_limits": "ตั้งแต่ 5 USD",
+                    "qr_limits": "ตั้งแต่ 350 ถึง 2,000,000"
+                },
+                "bonus": {
+                    "title1": "เพิ่มโบนัส",
+                    "title2": "เป็นสองเท่าใน",
+                    "title3": "การฝากเงิน",
+                    "title4": "ครั้งแรกของคุณ",
+                    "desc": "รับโบนัส 100% ตอนนี้ และรับเพิ่มอีกสูงสุด 60% สำหรับทุกการฝากเงินเกิน $100",
+                    "btn": "รับโบนัส"
+                },
+                "protection": {
+                    "title1": "เงินทุนของคุณได้รับการปกป้อง",
+                    "title2": "กับ RUBY",
+                    "items": [
+                        {
+                            "title": "บัญชีที่แยกต่างหาก",
+                            "desc": "เงินทุนของลูกค้าจะถูกเก็บไว้ในสถาบันการเงินระดับ Tier-1 ที่มีประกัน โดยแยกต่างหากจากเงินทุนหมุนเวียนของบริษัทอย่างชัดเจน"
+                        },
+                        {
+                            "title": "การถอนเงินที่ปลอดภัย",
+                            "desc": "กระบวนการถอนเงินทั้งหมดได้รับการปกป้องด้วยขั้นตอนการยืนยันตัวตนผ่านรหัสผ่านแบบใช้ครั้งเดียว (OTP)"
+                        },
+                        {
+                            "title": "มาตรฐานความปลอดภัย PCI DSS",
+                            "desc": "เราปฏิบัติตามมาตรฐานความปลอดภัยของข้อมูลบัตรเพื่อลดความเสี่ยงที่เกี่ยวข้องกับบัตรและปกป้องข้อมูลที่ละเอียดอ่อน"
+                        },
+                        {
+                            "title": "การชำระเงินแบบ 3D SECURE",
+                            "desc": "ขั้นตอนการยืนยันตัวตนเพิ่มเติมผ่าน SMS เพื่อให้แน่ใจว่าเฉพาะเจ้าของบัญชีที่ได้รับอนุญาตเท่านั้นที่สามารถอนุมัติการทำธุรกรรมออนไลน์ผ่านบัตรได้"
+                        }
+                    ]
+                }
+            },
+            "steps": {
+                "title": "ฝากเงินง่ายๆ ใน 3 ขั้นตอน",
+                "btn": "เปิดบัญชี",
+                "items": [
+                    {
+                        "number": "ขั้นตอนที่ 1",
+                        "title": "ยืนยันบัญชีของคุณ",
+                        "desc": "ดาวน์โหลดแอปพลิเคชัน RubyFX หรือเลือก \"เปิดบัญชี\" เพื่อลงทะเบียนและทำการยืนยันตัวตนให้เสร็จสมบูรณ์"
+                    },
+                    {
+                        "number": "ขั้นตอนที่ 2",
+                        "title": "เลือกวิธีการชำระเงิน",
+                        "desc": "คลิกปุ่ม <span class=\"text-[#00CC00]\">\"ฝากเงิน\"</span> เพื่อเข้าใช้ช่องทางการชำระเงินทั้งในประเทศและระดับสากล"
+                    },
+                    {
+                        "number": "ขั้นตอนที่ 3",
+                        "title": "ระบุข้อมูลที่จำเป็น",
+                        "desc": "ทำตามคำแนะนำบนหน้าจอและส่งรายละเอียดที่จำเป็นเพื่อทำธุรกรรมให้เสร็จสมบูรณ์"
+                    }
+                ]
+            },
+            "unlock_potential": {
+                "title1": "เงื่อนไขของเราช่วย",
+                "title2": "ปลดล็อกศักยภาพของคุณ",
+                "desc1": "ส่งคำสั่งซื้อขายเริ่มต้นที่ 0.01 วินาที",
+                "desc2": "สเปรดแบบลอยตัวเริ่มต้นที่ 0.7 pips",
+                "desc3": "มีบัญชี Demo และ Swap Free ให้บริการ",
+                "items": [
+                    {
+                        "label": "ตำแหน่งที่เปิดอยู่",
+                        "value": "สูงสุด 500 ออเดอร์ รวมถึงออเดอร์ล่วงหน้า 200 รายการ"
+                    },
+                    {
+                        "label": "เลเวอเรจที่ยืดหยุ่น",
+                        "value": "สูงสุด 1:3000"
+                    },
+                    {
+                        "label": "เงินฝากเริ่มต้น",
+                        "value": "ตั้งแต่ 5 USD"
+                    },
+                    {
+                        "label": "ปริมาณคำสั่งซื้อขาย",
+                        "value": "ตั้งแต่ 0.01 ถึง 500 ล็อต"
+                    },
+                    {
+                        "label": "Margin call",
+                        "value": "40%"
+                    },
+                    {
+                        "label": "Stop out",
+                        "value": "20%"
+                    }
+                ],
+                "btn": "ดูเงื่อนไขทั้งหมด"
+            },
+            "ruby_app": {
+                "hero": {
+                    "title1": "เทรดอย่างราบรื่น",
+                    "title2": "ได้ทุกที่ด้วย",
+                    "title3": "RUBY APP",
+                    "desc": "แพลตฟอร์มที่ประณีต ปลอดภัย และใช้งานง่าย ซึ่งออกแบบมาเพื่อช่วยให้คุณปลดล็อกศักยภาพการเทรดได้อย่างเต็มที่",
+                    "btn": "ดาวน์โหลด RUBY APP"
+                },
+                "features": {
+                    "title1": "แอปพลิเคชันที่ทำ",
+                    "title2": "ให้คุณ",
+                    "title3": "แข็งแกร่งขึ้น",
+                    "card1_title1": "เข้าถึงโอกาสทำกำไร",
+                    "card1_title2": "อย่างรวดเร็ว",
+                    "card1_desc": "วิเคราะห์แนวโน้มตลาดด้วยเครื่องมือกราฟที่ใช้งานง่าย จัดการคำสั่งซื้อขายได้ราบรื่น เข้าถึงตลาดได้ทุกที่ทุกเวลา"
+                },
+                "onboarding": {
+                    "title": "เริ่มเทรดได้โดยไม่ล่าช้า",
+                    "desc": "สัมผัสประสบการณ์การเริ่มต้นใช้งานที่รวดเร็ว ทั้งการลงทะเบียน การยืนยันตัวตน และการประมวลผลการฝากเงิน"
+                },
+                "stats": {
+                    "title": "เข้าถึงสถิติการเทรดของคุณ",
+                    "desc": "ดู Equity, ระดับ Margin, Free Margin และ P&L แบบเรียลไทม์ได้ในคลิกเดียว เพื่อประเมินโอกาสได้อย่างแม่นยำ"
+                },
+                "charts": {
+                    "title1": "ดูตัวอย่างและปรับแต่ง",
+                    "title2": "กราฟของคุณ",
+                    "desc": "เข้าถึงกราฟได้ทั่วทั้งแอปและตั้งค่าตามความชอบ ใช้ประโยชน์จากอินดิเคเตอร์กว่า 90 ตัวเพื่อระบุแนวโน้มและสนับสนุนการตัดสินใจ"
+                },
+                "everything": {
+                    "title1": "ครบทุกเรื่องเทรด",
+                    "title2": "ในแอปพลิเคชันเดียว",
+                    "items": [
+                        {
+                            "title": "กราฟที่แม่นยำ",
+                            "desc": "วิเคราะห์ความเคลื่อนไหวของราคาบนแผนภูมิที่จัดเตรียมโดยตรงจาก"
+                        },
+                        {
+                            "title": "บริการลูกค้า 24/7",
+                            "desc": "รับการตอบกลับในเวลาน้อยกว่าหนึ่งนาที ผ่านแอปพลิเคชันโดยตรง"
+                        },
+                        {
+                            "title": "ความปลอดภัยของข้อมูล",
+                            "desc": "ได้รับการปกป้องจากการแฮ็กและการโจรกรรมข้อมูล"
+                        },
+                        {
+                            "title": "อัปเดตจาก RUBY",
+                            "desc": "รับข้อมูลเชิงลึก โปรโมชั่น และการแจ้งเตือนยอดเงิน ได้ทุกที่ทุกเวลา"
+                        }
+                    ],
+                    "btn": "ดาวน์โหลด RUBY APP"
+                },
+                "buttons": {
+                    "google": "ดาวน์โหลดได้จาก",
+                    "apple_mt5": "ดาวน์โหลด MT5 ได้ที่",
+                    "apple_mt4": "ดาวน์โหลด MT4 ได้ที่",
+                    "apk": "ดาวน์โหลดไฟล์ APK",
+                    "app_store": "App Store",
+                    "play_store": "Google Play"
+                }
             }
         }
     }

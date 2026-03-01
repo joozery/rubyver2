@@ -1,27 +1,31 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { CandlestickChart, MessageCircle, ShieldCheck, Percent } from 'lucide-react';
 
 const RubyAppEverything = () => {
+    const { t } = useTranslation();
+    const everythingItems = t('ruby_app.everything.items', { returnObjects: true }) || [];
+
     const features = [
         {
             icon: <CandlestickChart className="text-[#0047FF]" size={40} />,
-            title: "ACCURATE CHARTS",
-            description: <>Analyze price movements on charts provided directly by <span className="text-[#D32F2F]">TradingView.</span></>
+            title: everythingItems[0]?.title || "ACCURATE CHARTS",
+            description: <>{everythingItems[0]?.desc} <span className="text-[#D32F2F]">TradingView.</span></>
         },
         {
             icon: <MessageCircle className="text-[#0047FF]" size={40} />,
-            title: "24/7 SUPPORT",
-            description: "Get a reply in under a minute, right in the app."
+            title: everythingItems[1]?.title || "24/7 SUPPORT",
+            description: everythingItems[1]?.desc || "Get a reply in under a minute, right in the app."
         },
         {
             icon: <ShieldCheck className="text-[#0047FF]" size={40} />,
-            title: "DATA SECURITY",
-            description: "Stay protected from hacking and data theft."
+            title: everythingItems[2]?.title || "DATA SECURITY",
+            description: everythingItems[2]?.desc || "Stay protected from hacking and data theft."
         },
         {
             icon: <Percent className="text-[#0047FF]" size={40} />,
-            title: "RUBY UPDATES",
-            description: "Receive trading insights, promotions, and transaction notifications on the go."
+            title: everythingItems[3]?.title || "RUBY UPDATES",
+            description: everythingItems[3]?.desc || "Receive trading insights, promotions, and transaction notifications on the go."
         }
     ];
 
@@ -31,10 +35,10 @@ const RubyAppEverything = () => {
                 {/* Section Header */}
                 <div className="text-center mb-16">
                     <h2 className="text-[36px] lg:text-[64px] font-black uppercase leading-[1.1] tracking-tight mb-2">
-                        EVERYTHING FOR TRADING
+                        {t('ruby_app.everything.title1')}
                     </h2>
                     <h2 className="text-[32px] lg:text-[54px] font-black uppercase text-[#D32F2F] tracking-tight">
-                        IN ONE APP
+                        {t('ruby_app.everything.title2')}
                     </h2>
                 </div>
 
@@ -58,7 +62,7 @@ const RubyAppEverything = () => {
                 {/* Download Button */}
                 <div className="flex justify-center">
                     <button className="bg-[#ff0000] hover:bg-red-700 text-white px-12 py-5 rounded-xl font-bold text-xl uppercase transition-all active:scale-[0.98] shadow-lg shadow-red-500/20">
-                        Download RUBY app
+                        {t('ruby_app.everything.btn')}
                     </button>
                 </div>
             </div>

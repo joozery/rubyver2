@@ -1,35 +1,21 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const DepositStepsSection = () => {
-    const steps = [
-        {
-            number: "Step 1",
-            title: "VERIFY YOUR ACCOUNT",
-            desc: 'Download the RubyFX application or select "Open Account" to complete registration and identity verification.'
-        },
-        {
-            number: "Step 2",
-            title: "SELECT A PAYMENT METHOD",
-            desc: 'Click the <span class="text-[#00CC00]">"Deposit"</span> button to access both international and local payment channels.'
-        },
-        {
-            number: "Step 3",
-            title: "PROVIDE THE REQUIRED INFORMATION",
-            desc: "Follow the on-screen instructions and submit the necessary details to complete your transaction."
-        }
-    ];
+    const { t } = useTranslation();
+    const steps = t('steps.items', { returnObjects: true }) || [];
 
     return (
         <section className="bg-[#111111] py-20 px-6 lg:px-12 font-['Sukhumvit_Set',_sans-serif]">
             <div className="max-w-[1240px] mx-auto text-white">
-                <h2 className="text-3xl lg:text-[40px] font-black uppercase mb-12">
-                    DEPOSIT IN THREE STEPS
+                <h2 className="text-2xl lg:text-[40px] font-black uppercase mb-8 lg:mb-12">
+                    {t('steps.title')}
                 </h2>
 
                 <div className="flex flex-col lg:flex-row items-center gap-12 mb-16">
                     {/* Left: Steps List */}
                     <div className="w-full lg:w-1/2 space-y-6">
-                        {steps.map((step, idx) => (
+                        {Array.isArray(steps) && steps.map((step, idx) => (
                             <div
                                 key={idx}
                                 className="border border-white/20 rounded-lg p-8 bg-black/40 backdrop-blur-sm"
@@ -41,8 +27,8 @@ const DepositStepsSection = () => {
                         ))}
                     </div>
 
-                    {/* Right: Mockup Image */}
-                    <div className="w-full lg:w-1/2 flex justify-center bg-white rounded-lg p-10 min-h-[500px] relative overflow-hidden">
+                    {/* Right: Phone Mockup - hidden on mobile */}
+                    <div className="hidden lg:flex w-full lg:w-1/2 justify-center bg-white rounded-lg p-10 min-h-[500px] relative overflow-hidden">
                         {/* Fake Phone Frame using CSS */}
                         <div className="w-[280px] h-[580px] bg-[#333] rounded-[48px] border-[12px] border-black shadow-2xl relative overflow-hidden">
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-6 bg-black rounded-b-2xl z-20" /> {/* Notch */}
@@ -55,8 +41,8 @@ const DepositStepsSection = () => {
 
                 {/* Bottom CTA Button */}
                 <div className="flex justify-center">
-                    <button className="bg-[#FF0000] hover:bg-[#D40000] text-white font-black py-4 px-20 rounded-xl text-3xl transition-all shadow-xl shadow-red-900/20 uppercase tracking-wide">
-                        Open Account
+                    <button className="bg-[#FF0000] hover:bg-[#D40000] text-white font-black py-3 lg:py-4 px-10 lg:px-20 rounded-xl text-xl lg:text-3xl transition-all shadow-xl shadow-red-900/20 uppercase tracking-wide w-full sm:w-auto">
+                        {t('steps.btn')}
                     </button>
                 </div>
             </div>

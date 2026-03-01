@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Play } from 'lucide-react';
 import phoneMobile from '../assets/Phone.png';
 
@@ -15,6 +16,8 @@ const AndroidIcon = () => (
 );
 
 const RubyAppOnboarding = () => {
+    const { t } = useTranslation();
+
     return (
         <section className="bg-white pb-24 overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
@@ -37,10 +40,10 @@ const RubyAppOnboarding = () => {
                     {/* Onboarding Content */}
                     <div className="lg:w-1/2 text-left">
                         <h3 className="text-2xl lg:text-4xl font-black uppercase mb-6 leading-tight">
-                            START TRADING WITHOUT DELAY
+                            {t('ruby_app.onboarding.title')}
                         </h3>
                         <p className="text-gray-600 text-lg mb-10 leading-relaxed font-medium max-w-lg">
-                            Enjoy swift onboarding with quick registration, seamless verification, and efficient deposit processing.
+                            {t('ruby_app.onboarding.desc')}
                         </p>
 
                         {/* Store Buttons Grid */}
@@ -50,8 +53,8 @@ const RubyAppOnboarding = () => {
                                     <Play size={24} fill="currentColor" />
                                 </div>
                                 <div className="flex flex-col text-left">
-                                    <span className="text-[10px] text-gray-500 leading-none uppercase font-bold">Get it on the</span>
-                                    <span className="text-base text-black font-black leading-tight">Google Play</span>
+                                    <span className="text-[10px] text-gray-500 leading-none uppercase font-bold">{t('ruby_app.buttons.google')}</span>
+                                    <span className="text-base text-black font-black leading-tight">{t('ruby_app.buttons.play_store')}</span>
                                 </div>
                             </a>
 
@@ -60,8 +63,8 @@ const RubyAppOnboarding = () => {
                                     <AppleIcon />
                                 </div>
                                 <div className="flex flex-col text-left">
-                                    <span className="text-[10px] text-gray-500 leading-none uppercase font-bold">Get MT5 on the</span>
-                                    <span className="text-base text-black font-black leading-tight">App Store</span>
+                                    <span className="text-[10px] text-gray-500 leading-none uppercase font-bold">{t('ruby_app.buttons.apple_mt5')}</span>
+                                    <span className="text-base text-black font-black leading-tight">{t('ruby_app.buttons.app_store')}</span>
                                 </div>
                             </a>
 
@@ -70,8 +73,8 @@ const RubyAppOnboarding = () => {
                                     <AppleIcon />
                                 </div>
                                 <div className="flex flex-col text-left">
-                                    <span className="text-[10px] text-gray-500 leading-none uppercase font-bold">Get MT4 on the</span>
-                                    <span className="text-base text-black font-black leading-tight">App Store</span>
+                                    <span className="text-[10px] text-gray-500 leading-none uppercase font-bold">{t('ruby_app.buttons.apple_mt4')}</span>
+                                    <span className="text-base text-black font-black leading-tight">{t('ruby_app.buttons.app_store')}</span>
                                 </div>
                             </a>
 
@@ -80,7 +83,7 @@ const RubyAppOnboarding = () => {
                                     <AndroidIcon />
                                 </div>
                                 <div className="flex flex-col text-left">
-                                    <span className="text-base text-black font-black leading-tight">Download APK</span>
+                                    <span className="text-base text-black font-black leading-tight">{t('ruby_app.buttons.apk')}</span>
                                 </div>
                             </a>
                         </div>

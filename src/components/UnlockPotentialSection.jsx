@@ -1,35 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { ChevronRight } from 'lucide-react';
 // Using the specified background image
 import crystalBg from '../assets/condition.jpg';
 
 const UnlockPotentialSection = () => {
-    const conditions = [
-        {
-            label: "Open positions",
-            value: "up to 500, including 200 pending orders"
-        },
-        {
-            label: "Flexible leverage",
-            value: "up to 1:3000"
-        },
-        {
-            label: "Initial deposit",
-            value: "from $5"
-        },
-        {
-            label: "Order volume",
-            value: "from 0.01 to 500 lots"
-        },
-        {
-            label: "Margin call",
-            value: "40%"
-        },
-        {
-            label: "Stop out",
-            value: "20%"
-        }
-    ];
+    const { t } = useTranslation();
+    const conditions = t('unlock_potential.items', { returnObjects: true }) || [];
 
     return (
         <section className="bg-black py-24 px-6 lg:px-12 relative overflow-hidden font-['Sukhumvit_Set',_sans-serif] min-h-[600px] flex items-center">
@@ -52,21 +29,21 @@ const UnlockPotentialSection = () => {
                 {/* Left Side: Headline & Subtext */}
                 <div className="lg:w-[45%]">
                     <h2 className="text-4xl lg:text-[48px] font-black uppercase text-white leading-[1.1] mb-10 tracking-tight">
-                        OUR CONDITIONS UNLOCK <br />
-                        YOUR POTENTIAL
+                        {t('unlock_potential.title1')} <br />
+                        {t('unlock_potential.title2')}
                     </h2>
 
                     <div className="space-y-1 text-white text-lg lg:text-[22px] font-normal max-w-sm leading-snug">
-                        <p>Order execution from 0.01 seconds.</p>
-                        <p>Floating spreads from 0.7 pips.</p>
-                        <p>Demo and Swap Free options available.</p>
+                        <p>{t('unlock_potential.desc1')}</p>
+                        <p>{t('unlock_potential.desc2')}</p>
+                        <p>{t('unlock_potential.desc3')}</p>
                     </div>
                 </div>
 
                 {/* Right Side: Conditions Data */}
                 <div className="lg:w-[55%] pt-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
-                        {conditions.map((item, idx) => (
+                        {Array.isArray(conditions) && conditions.map((item, idx) => (
                             <div key={idx} className="space-y-1.5 border-none">
                                 <h4 className="text-white/70 font-normal text-lg lg:text-xl">
                                     {item.label}
@@ -85,7 +62,7 @@ const UnlockPotentialSection = () => {
                             rel="noopener noreferrer"
                             className="flex items-center gap-4 border border-gray-400 rounded-lg px-8 py-2.5 text-white font-medium hover:bg-white/10 transition-all text-lg group w-max"
                         >
-                            See all conditions
+                            {t('unlock_potential.btn')}
                             <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
                         </a>
                     </div>

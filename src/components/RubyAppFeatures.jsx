@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Play } from 'lucide-react';
 import rubyGem from '../assets/rubygem.png';
 import phoneMobile from '../assets/Phone.png';
@@ -16,17 +17,19 @@ const AndroidIcon = () => (
 );
 
 const RubyAppFeatures = () => {
+    const { t } = useTranslation();
+
     return (
         <section className="bg-white py-24 overflow-hidden">
             <div className="container mx-auto px-6 lg:px-12">
                 {/* Section Header */}
                 <div className="text-center mb-16">
                     <h2 className="text-[32px] lg:text-[54px] font-black uppercase leading-tight tracking-tight flex flex-col items-center justify-center">
-                        <span className="text-black">THE APP THAT MAKES</span>
+                        <span className="text-black">{t('ruby_app.features.title1')}</span>
                         <span className="flex items-center gap-4">
-                            <span className="text-[#D32F2F]">YOU</span>
+                            <span className="text-[#D32F2F]">{t('ruby_app.features.title2')}</span>
                             <img src={rubyGem} alt="Ruby Gem" className="h-12 lg:h-20" />
-                            <span className="text-[#D32F2F]">STRONGER</span>
+                            <span className="text-[#D32F2F]">{t('ruby_app.features.title3')}</span>
                         </span>
                     </h2>
                 </div>
@@ -51,10 +54,10 @@ const RubyAppFeatures = () => {
                     {/* Features Content */}
                     <div className="lg:w-1/2 text-left">
                         <h3 className="text-2xl lg:text-4xl font-black uppercase mb-6 leading-tight">
-                            ENTER HIGH-POTENTIAL<br />TRADES INSTANTLY
+                            {t('ruby_app.features.card1_title1')}<br />{t('ruby_app.features.card1_title2')}
                         </h3>
                         <p className="text-gray-600 text-lg mb-10 leading-relaxed font-medium">
-                            Analyze market trends with intuitive charting tools, manage orders effortlessly, and access the market anytime, anywhere.
+                            {t('ruby_app.features.card1_desc')}
                         </p>
 
                         {/* Store Buttons Grid */}
@@ -64,8 +67,8 @@ const RubyAppFeatures = () => {
                                     <Play size={24} fill="currentColor" />
                                 </div>
                                 <div className="flex flex-col text-left">
-                                    <span className="text-[10px] text-gray-500 leading-none uppercase font-bold">Get it on the</span>
-                                    <span className="text-base text-black font-black leading-tight">Google Play</span>
+                                    <span className="text-[10px] text-gray-500 leading-none uppercase font-bold">{t('ruby_app.buttons.google')}</span>
+                                    <span className="text-base text-black font-black leading-tight">{t('ruby_app.buttons.play_store')}</span>
                                 </div>
                             </a>
 
@@ -74,8 +77,8 @@ const RubyAppFeatures = () => {
                                     <AppleIcon />
                                 </div>
                                 <div className="flex flex-col text-left">
-                                    <span className="text-[10px] text-gray-500 leading-none uppercase font-bold">Get MT5 on the</span>
-                                    <span className="text-base text-black font-black leading-tight">App Store</span>
+                                    <span className="text-[10px] text-gray-500 leading-none uppercase font-bold">{t('ruby_app.buttons.apple_mt5')}</span>
+                                    <span className="text-base text-black font-black leading-tight">{t('ruby_app.buttons.app_store')}</span>
                                 </div>
                             </a>
 
@@ -84,8 +87,8 @@ const RubyAppFeatures = () => {
                                     <AppleIcon />
                                 </div>
                                 <div className="flex flex-col text-left">
-                                    <span className="text-[10px] text-gray-500 leading-none uppercase font-bold">Get MT4 on the</span>
-                                    <span className="text-base text-black font-black leading-tight">App Store</span>
+                                    <span className="text-[10px] text-gray-500 leading-none uppercase font-bold">{t('ruby_app.buttons.apple_mt4')}</span>
+                                    <span className="text-base text-black font-black leading-tight">{t('ruby_app.buttons.app_store')}</span>
                                 </div>
                             </a>
 
@@ -94,7 +97,7 @@ const RubyAppFeatures = () => {
                                     <AndroidIcon />
                                 </div>
                                 <div className="flex flex-col text-left">
-                                    <span className="text-base text-black font-black leading-tight">Download APK</span>
+                                    <span className="text-base text-black font-black leading-tight">{t('ruby_app.buttons.apk')}</span>
                                 </div>
                             </a>
                         </div>
